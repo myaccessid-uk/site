@@ -1,6 +1,6 @@
 # MyAccessID Online Workshop
 
-As part of the NFCS Networkplus project [Exploring the Governance Requirements for Enabling UK DRIs to Adopt MyAccessID][nfcs-myaccessid-project], the MyAccessID UK User Community is hosting a two-hour online workshop on MyAccessID via Microsoft Teams on 2<sup>nd</sup> December.
+As part of the NFCS Networkplus project [Exploring the Governance Requirements for Enabling UK DRIs to Adopt MyAccessID][nfcs-myaccessid-project], the MyAccessID UK User Community is hosting a two-hour online workshop on MyAccessID via Microsoft Teams on 2<sup>nd</sup> December from 10:00 am to 12:00pm.
 
 To take part in the workshop, please register by completing the form below by **5PM on Friday, 28<sup>th</sup> November**:
 
