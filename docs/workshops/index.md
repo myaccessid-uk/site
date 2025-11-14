@@ -6,7 +6,7 @@ See below for information about upcoming MyAccessID UK User Community Workshops
 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Information page                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2025-12-02<br>PLACEHOLDER| PLACEHOLDER | MyAccessID Online Workshop | :material-close: | :material-check: |[MyAccessID Online Workshop][myaccessid-online-workshop] |
+| 2025-12-02<br>10:00-12:00| Introduction to Federated User Authentication with MyAccessID | MyAccessID Online Workshop | :material-close: | :material-check: |[MyAccessID Online Workshop][myaccessid-online-workshop] |
 
 ## Past sessions
 
