@@ -14,7 +14,7 @@ The workshop will feature talks from the STFC Hartree Centre, UCL, the Universit
 
 ## Mailing list
 
-If you are interested, consider subscribing to the [IAM4DRI@JISCMAIL.AC.UK][mail-to-link] mailing list. This list supports discussion, knowledge exchange, case studies, and problem-solving elated to federated access approaches.
+If you are interested, consider subscribing to the [IAM4DRI@JISCMAIL.AC.UK][mail-to-link] mailing list. This list supports discussion, knowledge exchange, case studies, and problem-solving related to federated access approaches.
 
 You can subscribe directly using the link below:
 
