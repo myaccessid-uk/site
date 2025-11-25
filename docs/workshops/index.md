@@ -14,5 +14,5 @@ See below for information about upcoming MyAccessID UK User Community Workshops
 | ------------------------- | ----------------------- | ----------------------------------- | ---------------- | ---------------- |
 | 2025-09-22<br>14:30-15:00 | Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Autumn Conference][nfcs-autumn-conf], University of Edinburgh, UK | :material-check: | :material-check: |
 
-[myaccessid-online-workshop]: MyAccessID-Online-Workshop
+[myaccessid-online-workshop]: MyAccessID-Online-Workshop.md
 [nfcs-autumn-conf]: https://nfcs-networkplus.ac.uk/events/connected-for-impact-exploring-federation-for-industry-and-public-sector/
