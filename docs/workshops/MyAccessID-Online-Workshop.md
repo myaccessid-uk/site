@@ -8,9 +8,20 @@ To take part in the workshop, please register by completing the form below by **
 
 Upon registration, you will receive the Microsoft Teams meeting invitation by email in advance of the workshop. The meeting will be recorded, and the workshop materials will be made available afterwards.
 
-## Workshop Material
+## Workshop Agenda
 
-The workshop will feature talks from the STFC Hartree Centre, UCL, the University of Bristol, and the University of Cambridge. Topics will include an introduction to MyAccessID and its potential as a federated IAM solution. DRI providers who have implemented MyAccessID will share their experiences, including existing pain points within the service and potential improvements. The talks will be followed by an open Q&A session.
+The workshop will feature talks from Jisc the STFC Hartree Centre, UCL, the University of Bristol, and the University of Cambridge. Topics will include an introduction to MyAccessID and its potential as a federated IAM solution. DRI providers who have implemented MyAccessID will share their experiences, including existing pain points within the service and potential improvements. The talks will be followed by an open Q&A session.
+
+| Start Time | Session                                                                                                   | Speaker / Organisation        |
+|------------|-----------------------------------------------------------------------------------------------------------|-------------------------------|
+| 10:00      | Welcome                                                                                                   | —                             |
+| 10:05      | MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform                          | University of Cambridge       |
+| 10:25      | The Journey to Get a Connection                                                                           | UCL                           |
+| 10:40      | Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre                                       | STFC Hartree Centre           |
+| 10:55      | Coffee break                                                                                              | —                             |
+| 11:00      | Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak                     | University of Bristol         |
+| 11:20      | MyAccessID Governance and Roadmap in GN5-2                                                                | Jisc                          |
+| 11:40      | Q&A session                                                                                               | —                             |
 
 ## Mailing list
 
