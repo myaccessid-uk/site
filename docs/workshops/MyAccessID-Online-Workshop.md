@@ -10,7 +10,7 @@ Upon registration, you will receive the Microsoft Teams meeting invitation by em
 
 ## Workshop Agenda
 
-The workshop will feature talks from Jisc the STFC Hartree Centre, UCL, the University of Bristol, and the University of Cambridge. Topics will include an introduction to MyAccessID and its potential as a federated IAM solution. DRI providers who have implemented MyAccessID will share their experiences, including existing pain points within the service and potential improvements. The talks will be followed by an open Q&A session.
+The workshop will feature talks from Jisc, the STFC Hartree Centre, UCL, the University of Bristol, and the University of Cambridge. Topics will include an introduction to MyAccessID and its potential as a federated IAM solution. DRI providers who have implemented MyAccessID will share their experiences, including existing pain points within the service and potential improvements. The talks will be followed by an open Q&A session.
 
 | Start Time | Session                                                                                                   | Speaker / Organisation        |
 |------------|-----------------------------------------------------------------------------------------------------------|-------------------------------|
