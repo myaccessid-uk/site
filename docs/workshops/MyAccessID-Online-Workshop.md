@@ -19,12 +19,12 @@ The workshop will feature talks from Jisc, the STFC Hartree Centre, UCL, the Uni
 
 ## Slides from the event
 
-[Welcome][into.pptx]
-[MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform][cambridge.pptx]
-[The Journey to Get a Connection][ucl.pptx]
-[Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre][hartree.pptx]
-[Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak][bristol.pptx]
-[MyAccessID Governance and Roadmap in GN5-2][jisc.pptx]
+- [Welcome][into.pptx]
+- [MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform][cambridge.pptx]
+- [The Journey to Get a Connection][ucl.pptx]
+- [Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre][hartree.pptx]
+- [Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak][bristol.pptx]
+- [MyAccessID Governance and Roadmap in GN5-2][jisc.pptx]
 
 ## Mailing list
 
@@ -39,13 +39,12 @@ Or visit the mailing list homepage:
 - **[IAM4DRI mailing list homepage][mail-list-homepage]**
 
 [nfcs-myaccessid-project]: https://nfcs-networkplus.ac.uk/projects/exploring-the-governance-requirements-for-enabling-uk-dris-to-adopt-myaccessid/
-[into.pptx][../slides/2025-12-02-into.pptx]
-[cambridge.pptx][../slides/2025-12-02-myaccessid-cambridge.pptx]
-[ucl.pptx][../slides/2025-12-02-myaccessid-ucl.pptx]
-[hartree.pptx][../slides/2025-12-02-myaccessid-hartree.pptx]
-[bristol.pptx][../slides/2025-12-02-myaccessid-bristol.pptx]
-[jisc.pptx][../slides025-12-02-myaccessid-j
-isc.pptx]
+[into.pptx]: ../slides/2025-12-02-into.pptx
+[cambridge.pptx]: ../slides/2025-12-02-myaccessid-cambridge.pptx
+[ucl.pptx]: ../slides/2025-12-02-myaccessid-ucl.pptx
+[hartree.pptx]: ../slides/2025-12-02-myaccessid-hartree.pptx
+[bristol.pptx]: ../slides/2025-12-02-myaccessid-bristol.pptx
+[jisc.pptx]: ../slides/2025-12-02-myaccessid-jisc.pptx
 [mail-to-link]: mailto:IAM4DRI@JISCMAIL.AC.UK
 [mail-registration-link]: https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=IAM4DRI&A=1
 [mail-list-homepage]: https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?A0=IAM4DRI
