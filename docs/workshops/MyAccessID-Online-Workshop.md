@@ -6,25 +6,16 @@ As part of the NFCS Networkplus project [Exploring the Governance Requirements f
 
 The workshop will feature talks from Jisc, the STFC Hartree Centre, UCL, the University of Bristol, and the University of Cambridge. Topics will include an introduction to MyAccessID and its potential as a federated IAM solution. DRI providers who have implemented MyAccessID will share their experiences, including existing pain points within the service and potential improvements. The talks will be followed by an open Q&A session.
 
-| Start Time | Session                                                                                                   | Speaker / Organisation        |
-|------------|-----------------------------------------------------------------------------------------------------------|-------------------------------|
-| 10:00      | Welcome                                                                                                   | —                             |
-| 10:05      | MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform                          | University of Cambridge       |
-| 10:25      | The Journey to Get a Connection                                                                           | UCL                           |
-| 10:40      | Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre                                       | STFC Hartree Centre           |
-| 10:55      | Coffee break                                                                                              | —                             |
-| 11:00      | Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak                     | University of Bristol         |
-| 11:20      | MyAccessID Governance and Roadmap in GN5-2                                                                | Jisc                          |
-| 11:40      | Q&A session                                                                                               | —                             |
-
-## Slides from the event
-
-- [Welcome][into.pptx]
-- [MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform][cambridge.pptx]
-- [The Journey to Get a Connection][ucl.pptx]
-- [Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre][hartree.pptx]
-- [Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak][bristol.pptx]
-- [MyAccessID Governance and Roadmap in GN5-2][jisc.pptx]
+| Start Time | Session                                                                                                   | Speaker / Organisation        | Resources                                                                                 |
+|------------|-----------------------------------------------------------------------------------------------------------|-------------------------------|-------------------------------------------------------------------------------------------|
+| 10:00      | Welcome                                                                                                   | —                             | [Slides][intro.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=2s)      |
+| 10:05      | MyAccessID in Practice: From Concept to Integration in Cambridge’s AIRR Platform                          | University of Cambridge       | [Slides][cambridge.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=294s)|
+| 10:25      | The Journey to Get a Connection                                                                           | UCL                           | [Slides][ucl.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=1500s)     |
+| 10:40      | Motivation for Exploring MyAccessID Adoption at STFC Hartree Centre                                       | STFC Hartree Centre           | [Slides][hartree.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=2311s) |
+| 10:55      | Coffee break                                                                                              | —                             | —                                                                                         |
+| 11:00      | Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak                     | University of Bristol         | [Slides][bristol.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=3083s) |
+| 11:20      | MyAccessID Governance and Roadmap in GN5-2                                                                | Jisc                          | [Slides][jisc.pptx] · [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=3789s)    |
+| 11:40      | Q&A session                                                                                               | —                             | —                                                                                         |
 
 ## Mailing list
 
@@ -39,7 +30,7 @@ Or visit the mailing list homepage:
 - **[IAM4DRI mailing list homepage][mail-list-homepage]**
 
 [nfcs-myaccessid-project]: https://nfcs-networkplus.ac.uk/projects/exploring-the-governance-requirements-for-enabling-uk-dris-to-adopt-myaccessid/
-[into.pptx]: ../slides/2025-12-02-into.pptx
+[intro.pptx]: ../slides/2025-12-02-intro.pptx
 [cambridge.pptx]: ../slides/2025-12-02-myaccessid-cambridge.pptx
 [ucl.pptx]: ../slides/2025-12-02-myaccessid-ucl.pptx
 [hartree.pptx]: ../slides/2025-12-02-myaccessid-hartree.pptx
