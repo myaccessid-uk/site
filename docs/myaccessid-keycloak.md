@@ -107,9 +107,7 @@ Keycloak is configured to automatically create user accounts the first time a us
 
 To support authorisation based on project membership in Waldur, the **Post Login Flow** is configured to use the `Waldur Check Access` plugin. This allows Keycloak to evaluate whether an authenticated user is authorised to access services based on information retrieved from Waldur.
 
----
-
-### Attributes, Claims, and Scopes
+#### Attributes, Claims, and Scopes
 
 The configuration of attributes, claims, and scopes may vary between DRI sites depending on local requirements.
 
@@ -126,6 +124,6 @@ To request these attributes from MyAccessID, the **Scopes** field under the adva
 
 ![keycloak-mappers](../images/bristol-keycloak-mappers.png)
 
-The corresponding **mappers** are configured in Keycloak to consume and map these attributes into the user model, as shown above.
+The corresponding **mappers** are configured in Keycloak to consume and map these attributes into the user account, as shown above.
 
-Additionally, users authenticating via MyAccessID are automatically assigned to a dedicated Keycloak group using the **ForceMyAccessIDGroup Mapper**. This grouping simplifies management and policy enforcement for users who log in through MyAccessID.
+Additionally, users authenticating via MyAccessID are configured to be automatically assigned to a dedicated Keycloak group using the **ForceMyAccessIDGroup Mapper**. This grouping simplifies management and policy enforcement for users who log in through MyAccessID.
