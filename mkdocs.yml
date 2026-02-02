@@ -17,6 +17,8 @@ nav:
     - Workshops:
         - "workshops/index.md"
         - "workshops/MyAccessID-Online-Workshop.md"
+    - FAQ: faq.md
+    - Join IAM4DRI Mailing List: join-iam4dri.md 
 extra_css:
     - stylesheets/extra.css
 markdown_extensions:

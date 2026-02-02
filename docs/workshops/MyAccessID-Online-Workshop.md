@@ -15,7 +15,7 @@ The workshop will feature talks from Jisc, the STFC Hartree Centre, UCL, the Uni
 | 10:55      | Coffee break                                                                                              | —                             | —                        | —                                                                 |
 | 11:00      | Implementing Compliant Authentication and Authorisation using MyAccessID and Keycloak                     | University of Bristol         | [Slides][bristol.pptx]   | [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=51m24s) |
 | 11:20      | MyAccessID Governance and Roadmap in GN5-2                                                                | Jisc                          | [Slides][jisc.pptx]      | [Recording](https://www.youtube.com/watch?v=-qSWXGv1S_4&t=1h3m9s) |
-| 11:40      | Q&A session                                                                                               | —                             | —                        | —                                                                 |
+| 11:40      | Q&A session                                                                                               | —                             | [FAQ](../faq.md)                        | —                                                                 |
 
 ## Mailing list
 
