@@ -183,23 +183,14 @@ As the service evolves, there is a need to support users whose institutions are 
 The figure above shows the identity providers currently linked to the BriCS Keycloak instance. Depending on their affiliation, users select the appropriate option from the list to log in.
 
 1. **University Login (MyAccessID)**
-
    Uses the MyAccessID integration described earlier and allows users whose institutions participate in MyAccessID to log in using their institutional credentials.
-
 2. **AISI (Okta Login)**
-
    As [AISI](https://www.aisi.gov.uk/) is a significant user of BriCS services, its Okta identity platform is configured as an external identity provider. This allows AISI users to log in using their existing Okta identities.
-
 3. **NCC Login**
-
    Used by [NCC](https://www.nccuk.com/) users to log in with their Microsoft Entra ID accounts.
-
 4. **Other Login (IdP of Last Resort)**
-
    This option is used for users who are not part of MyAccessID or the institutions listed above. These users authenticate using identities that are manually created in AWS IAM Identity Center.
-
 5. **BriCS (Administrators Only)**
-
    Used exclusively by BriCS service administrators. This option also relies on identities managed in AWS IAM Identity Center.
 
 If there is a sufficient number of users from an organisation, it can be beneficial to support that organisation's identity provider directly if it is not currently part of MyAccessID, as is the case for AISI and ncc.
