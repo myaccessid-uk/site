@@ -17,7 +17,7 @@ nav:
     - Workshops:
         - "workshops/index.md"
         - "workshops/MyAccessID-Online-Workshop.md"
-    - Resources: docs/myaccessid-keycloak-setup.md
+    - Resources: myaccessid-keycloak-setup.md
     - FAQ: faq.md
     - Join IAM4DRI Mailing List: join-iam4dri.md 
 extra_css:
