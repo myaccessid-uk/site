@@ -131,21 +131,13 @@ Additionally, users authenticating via MyAccessID are configured to be automatic
 [Authentication flows](https://www.keycloak.org/docs/latest/server_admin/index.html#_authentication-flows) are configurable sequences of steps that determine how a user is authenticated and processed during login. In this context, the following flows are used:
 
 1. **`Auto Create and Link Account`**
-
    This flow uses two built-in executions, as shown below.
-
    ![keycloak-auto-create-account](./images/bristol-authz-create-acc.png)
-
    After authentication, a Keycloak user account is created if one does not already exist. If an account already exists, it is reused.
-
 2. **`Waldur Check Access`**
-
    This flow uses two custom Keycloak plugins to support authorisation and compliance, as shown below.
-
    ![keycloak-waldur-check-access](./images/bristol-authz-waldur-access.png)
-
    The source code for the Java plugins implementing these executions is available on [GitHub](https://github.com/isambard-sc/keycloakplugins/tree/main).  The **auth-plugin** is responsible for querying Waldur for project membership. Once the user is authenticated, the plugin uses the user’s email address to query Waldur and retrieve project membership information. The user is only permitted to log in if they are a member of at least one project.
-
    After this check, the **tandc-plugin** ensures that the user has accepted the latest Access Terms, Acceptable Use Policy, and Data Privacy Policy.
    ![keycloak-tandc-prmopt](./images/bristol-authz-access-terms.png)
    Once these conditions are satisfied, authorisation is complete and the user is granted access to the requested service.
@@ -167,11 +159,8 @@ In the BriCS implementation, the following additional realms are used:
 ![keycloak-realm](./images/bristol-keycloak-realm.png)
 
 1. **Isambard Realm**
-
    The `isambard` realm is the primary realm used for BriCS services. It is used by user-facing BriCS services to authenticate both standard users and administrators.
-
 2. **Administrators Realm**
-
    This realm is used for internal BriCS services that are accessed exclusively by the BriCS team.
 
 ### Supporting Users Without MyAccessID Institutional Access
@@ -226,13 +215,9 @@ For AIRRPortal logins, two additional realms are configured in Keycloak:
 ![airrportal-realm](./images/airrportal-keycloak-realm.png)
 
 1. `connector` realm
-
    This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the existing MyAccessID connection configured for the `isambard` realm is reused.
-
    By default, users are directed to the login page for the Connector realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option.
-
 2. `idp` realm
-
    This realm is dedicated to the email-based authenticator. It uses the [magic link plugin](https://github.com/p2-inc/keycloak-magic-link) to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the `connector` realm, so that users are redirected here when selecting the email-based login option.
 
 ###### Setting up the `idp` realm
