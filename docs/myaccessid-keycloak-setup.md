@@ -19,13 +19,13 @@ However, successful authentication alone does not imply that a user is permitted
 
 ### Authentication with MyAccessID
 
-![requesting authenticated identity](../images/bristol-authn-req.png)
+![requesting authenticated identity](./images/bristol-authn-req.png)
 
 The diagram above illustrates authentication using MyAccessID as implemented in the [BriCS](https://www.bristol.ac.uk/research/centres/bristol-supercomputing/) Isambard-AI service. In this example, a user attempts to log in to the project management application Waldur.
 
 Keycloak acts as an identity broker between the application and the identity provider, i.e between Waldur and MyAccessID. When the user selects the “University Login (MyAccessID)” option on the Keycloak *Choose your identity provider* page, they are redirected to MyAccessID. MyAccessID then prompts the user to authenticate using their institutional credentials.
 
-![receiving authenticated identity](../images/bristol-authn-recv.png)
+![receiving authenticated identity](./images/bristol-authn-recv.png)
 
 In this example, the user’s home institution is the University of Bristol and they login using their institutional account. After successful authentication, MyAccessID sends the user’s identity attributes—such as email address, first name, and last name—back to Keycloak.
 
@@ -68,7 +68,7 @@ The SSH authorisation process consists of two distinct phases: an **authorisatio
 
 ##### Authorisation Request Path (User → Keycloak → Waldur)
 
-![authorisation request flow](../images/bristol-authz-req.png)
+![authorisation request flow](./images/bristol-authz-req.png)
 
 This diagram shows how an SSH authorisation request propagates from the user, through Keycloak, to Waldur.
 
@@ -82,7 +82,7 @@ This diagram shows how an SSH authorisation request propagates from the user, th
 
 ##### Authorisation Response Path (Waldur → Keycloak → User)
 
-![authorisation response flow](../images/bristol-authz-recv.png)
+![authorisation response flow](./images/bristol-authz-recv.png)
 
 This diagram shows how the authorisation decision is returned from Waldur, via Keycloak, back to the user.
 
@@ -97,7 +97,7 @@ Follow the guidance provided in the official [MyAccessID documentation for conne
 
 The section below highlights configuration settings that are not explicitly covered in the official documentation, but are included here as a reference from the current configuration at BriCS.
 
-![keycloak-advanced-settings](../images/bristol-keycloak-advanced.png)
+![keycloak-advanced-settings](./images/bristol-keycloak-advanced.png)
 
 The **Trust Email** option is enabled because the email address provided by MyAccessID is verified. Users authenticate to MyAccessID using their institutional credentials, and the email attribute returned is associated with that verified institutional identity.
 
@@ -120,7 +120,7 @@ To request these attributes from MyAccessID, the **Scopes** field under the adva
 
 `openid profile email`
 
-![keycloak-mappers](../images/bristol-keycloak-mappers.png)
+![keycloak-mappers](./images/bristol-keycloak-mappers.png)
 
 The corresponding **mappers** are configured in Keycloak to consume and map these attributes into the user account, as shown above.
 
@@ -134,7 +134,7 @@ Additionally, users authenticating via MyAccessID are configured to be automatic
 
    This flow uses two built-in executions, as shown below.
 
-   ![keycloak-auto-create-account](../images/bristol-authz-create-acc.png)
+   ![keycloak-auto-create-account](./images/bristol-authz-create-acc.png)
 
    After authentication, a Keycloak user account is created if one does not already exist. If an account already exists, it is reused.
 
@@ -142,17 +142,17 @@ Additionally, users authenticating via MyAccessID are configured to be automatic
 
    This flow uses two custom Keycloak plugins to support authorisation and compliance, as shown below.
 
-   ![keycloak-waldur-check-access](../images/bristol-authz-waldur-access.png)
+   ![keycloak-waldur-check-access](./images/bristol-authz-waldur-access.png)
 
    The source code for the Java plugins implementing these executions is available on [GitHub](https://github.com/isambard-sc/keycloakplugins/tree/main).  The **auth-plugin** is responsible for querying Waldur for project membership. Once the user is authenticated, the plugin uses the user’s email address to query Waldur and retrieve project membership information. The user is only permitted to log in if they are a member of at least one project.
 
    After this check, the **tandc-plugin** ensures that the user has accepted the latest Access Terms, Acceptable Use Policy, and Data Privacy Policy.
-   ![keycloak-tandc-prmopt](../images/bristol-authz-access-terms.png)
+   ![keycloak-tandc-prmopt](./images/bristol-authz-access-terms.png)
    Once these conditions are satisfied, authorisation is complete and the user is granted access to the requested service.
 
 To support these flows, the Keycloak **User Profile** is extended to store additional information.
 
-![keycloak-user-profile](../images/bristol-user-profile.png)
+![keycloak-user-profile](./images/bristol-user-profile.png)
 
 As shown above, the realm’s User Profile includes additional fields such as `projects`, which record the projects the user is authorised to access, as well as fields that capture policy acceptance state: `tandc_accepted`, `dpriv_accepted`, and `ause_accepted`. The `short_name` field is used by Clifton to support SSH access.
 
@@ -164,7 +164,7 @@ Out of the box, Keycloak includes a privileged **`master` realm**, which is used
 
 In the BriCS implementation, the following additional realms are used:
 
-![keycloak-realm](../images/bristol-keycloak-realm.png)
+![keycloak-realm](./images/bristol-keycloak-realm.png)
 
 1. **Isambard Realm**
 
@@ -178,7 +178,7 @@ In the BriCS implementation, the following additional realms are used:
 
 As the service evolves, there is a need to support users whose institutions are not part of MyAccessID(eduGAIN). In the current BriCS deployment, several approaches are used to accommodate these users.
 
-![keycloak-idp-list](../images/bristol-idp-list.png)
+![keycloak-idp-list](./images/bristol-idp-list.png)
 
 The figure above shows the identity providers currently linked to the BriCS Keycloak instance. Depending on their affiliation, users select the appropriate option from the list to log in.
 
@@ -212,19 +212,19 @@ One possible approach to address these challenges is to use an email-based authe
 
 AIRRPortal is the platform through which users apply for access to [AI Research Resources](https://www.gov.uk/government/publications/ai-research-resource). Users authenticate to AIRRPortal using Keycloak and ease of access to the platform is an important consideration.
 
-![airrportal-idp-list](../images/airrportal-idp-list.png)
+![airrportal-idp-list](./images/airrportal-idp-list.png)
 
 As shown in the image above, AIRRPortal supports University Login using MyAccessID. Administrators authenticate using identities from AWS IAM Identity Center, which is configured as an external identity provider (IdP) in Keycloak. For users who cannot use MyAccessID, an email-based login option is also available.
 
 The email-based login verifies a user’s identity by confirming control of an email address. During authentication, Keycloak sends a one-time code or link to the user’s email address, which the user must present to complete the login process.
 
-![airrportal-email-authenticator-init-flow](../images/airrportal-email-authenticator-init.png)
+![airrportal-email-authenticator-init-flow](./images/airrportal-email-authenticator-init.png)
 
 When a user logs in using the email authenticator for the first time, a Keycloak account is automatically created as part of the authentication flow. Initial registration uses a dedicated mechanism in which the user’s email address is verified via a magic link. Once the user accesses the link sent to their email, authentication is completed and the user is logged in to AIRRPortal.
 
 Subsequent logins use a simplified flow using a one-time code sent to the user's email address.
 
-![airrportal-email-authenticator-flow](../images/airrportal-email-authenticator.png)
+![airrportal-email-authenticator-flow](./images/airrportal-email-authenticator.png)
 
 As shown above, the user supplies the email address previously registered with the email authenticator and verifies their identity using the one-time code sent to their email.
 
@@ -232,7 +232,7 @@ As shown above, the user supplies the email address previously registered with t
 
 For AIRRPortal logins, two additional realms are configured in Keycloak:
 
-![airrportal-realm](../images/airrportal-keycloak-realm.png)
+![airrportal-realm](./images/airrportal-keycloak-realm.png)
 
 1. `connector` realm
 
@@ -248,25 +248,25 @@ For AIRRPortal logins, two additional realms are configured in Keycloak:
 
 The realm is configured to allow users to register and log in using their email address.
 
-![idp-realm-login](../images/idp-realm-login-conf.png)
+![idp-realm-login](./images/idp-realm-login-conf.png)
 
 As shown in the realm settings, `User registration` is enabled. `Login with email` is turned on, with `Email as username` and `Verify email` enabled.
 
 The built-in browser-based authentication flow is modified as follows:
 
-![idp-realm-browser-auth](../images/idp-realm-browser-auth-flow.png)
+![idp-realm-browser-auth](./images/idp-realm-browser-auth-flow.png)
 
 This is created from a copy of the default browser flow is created. This is then edited as shown above, and set as the default using the `actions` menu in the top-right of the window.
 
 An OIDC client is configured in this realm so that the `connector` realm can use it as an identity provider.
 
-![idp-client-settings-1](../images/idp-realm-client-settings-1.png)
+![idp-client-settings-1](./images/idp-realm-client-settings-1.png)
 
 The Root URL and Home URL are configured as shown. Web Origins is set to allow all origins.
 
 The remaining client settings are shown below:
 
-![idp-client-settings-2](../images/idp-realm-client-settings-2.png)
+![idp-client-settings-2](./images/idp-realm-client-settings-2.png)
 
 `Client authentication` is enabled, as this is not a public client and requires a pre-shared client secret. `Front-channel logout` is also enabled.
 
@@ -274,16 +274,16 @@ The remaining client settings are shown below:
 
 An identity provider is configured in the `connector` realm using the details of the client defined in the `idp` realm.
 
-![connector-idp-settings-1](../images/connector-realm-idp-settings-1.png)
+![connector-idp-settings-1](./images/connector-realm-idp-settings-1.png)
 
 The previously configured `Client ID` and the `Client Secret` generated for the client in the IdP realm are used here.
 
 Advanced settings are configured as shown below:
 
-![connector-idp-settings-2](../images/connector-realm-idp-settings-2.png)
+![connector-idp-settings-2](./images/connector-realm-idp-settings-2.png)
 
 `Trust Email` is enabled, as the email address returned by the IdP realm has already been verified. `First Login Flow Override` is set to use a modified authentication flow, shown below.
 
-![connector-first-login-flow](../images/connector-realm-first-login-flow.png)
+![connector-first-login-flow](./images/connector-realm-first-login-flow.png)
 
 A copy of the default flow is created, edited as shown above, and set as the default using the `actions` menu in the top-left of the window.
