@@ -234,31 +234,31 @@ For AIRRPortal logins, two additional realms are configured in Keycloak:
 
 ![airrportal-realm](../images/airrportal-keycloak-realm.png)
 
-1. Connector realm
+1. `connector` realm
 
-   This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the existing MyAccessID connection configured for the Isambard realm is reused.
+   This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the existing MyAccessID connection configured for the `isambard` realm is reused.
 
    By default, users are directed to the login page for the Connector realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option.
 
-2. IdP realm
+2. `idp` realm
 
-   This realm is dedicated to the email-based authenticator. It uses the [magic link plugin](https://github.com/p2-inc/keycloak-magic-link) to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the Connector realm, so that users are redirected here when selecting the email-based login option.
+   This realm is dedicated to the email-based authenticator. It uses the [magic link plugin](https://github.com/p2-inc/keycloak-magic-link) to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the `connector` realm, so that users are redirected here when selecting the email-based login option.
 
-###### Setting up the IdP realm
+###### Setting up the `idp` realm
 
 The realm is configured to allow users to register and log in using their email address.
 
 ![idp-realm-login](../images/idp-realm-login-conf.png)
 
-As shown in the realm settings, user registration is enabled. Login with email is turned on, with Email as username and Verify email enabled.
+As shown in the realm settings, `User registration` is enabled. `Login with email` is turned on, with `Email as username` and `Verify email` enabled.
 
 The built-in browser-based authentication flow is modified as follows:
 
 ![idp-realm-browser-auth](../images/idp-realm-browser-auth-flow.png)
 
-A copy of the default flow is created, edited as shown above, and set as the default using the actions menu in the top-left of the window.
+This is created from a copy of the default browser flow is created. This is then edited as shown above, and set as the default using the `actions` menu in the top-right of the window.
 
-An OIDC client is configured in this realm so that the Connector realm can use it as an identity provider.
+An OIDC client is configured in this realm so that the `connector` realm can use it as an identity provider.
 
 ![idp-client-settings-1](../images/idp-realm-client-settings-1.png)
 
@@ -268,22 +268,22 @@ The remaining client settings are shown below:
 
 ![idp-client-settings-2](../images/idp-realm-client-settings-2.png)
 
-Client authentication is enabled, as this is not a public client and requires a pre-shared client secret. Front-channel logout is also enabled.
+`Client authentication` is enabled, as this is not a public client and requires a pre-shared client secret. `Front-channel logout` is also enabled.
 
-###### Setting up the Connector realm
+###### Setting up the connector realm
 
-An identity provider is configured in the Connector realm using the client defined in the IdP realm.
+An identity provider is configured in the `connector` realm using the details of the client defined in the `idp` realm.
 
-![connectore-idp-settings-1](../images/connector-realm-idp-settings-1.png)
+![connector-idp-settings-1](../images/connector-realm-idp-settings-1.png)
 
-The previously configured Client ID and the Client Secret generated for the client in the IdP realm are used here.
+The previously configured `Client ID` and the `Client Secret` generated for the client in the IdP realm are used here.
 
 Advanced settings are configured as shown below:
 
-![connectore-idp-settings-2](../images/connector-realm-idp-settings-2.png)
+![connector-idp-settings-2](../images/connector-realm-idp-settings-2.png)
 
-Trust Email is enabled, as the email address returned by the IdP realm has already been verified. First Login Flow Override is set to use a modified authentication flow, shown below.
+`Trust Email` is enabled, as the email address returned by the IdP realm has already been verified. `First Login Flow Override` is set to use a modified authentication flow, shown below.
 
-![connectore-first-login-flow](../images/connector-realm-first-login-flow.png)
+![connector-first-login-flow](../images/connector-realm-first-login-flow.png)
 
-A copy of the default flow is created, edited as shown above, and set as the default using the actions menu in the top-left of the window.
+A copy of the default flow is created, edited as shown above, and set as the default using the `actions` menu in the top-left of the window.
