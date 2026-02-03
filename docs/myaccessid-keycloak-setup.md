@@ -13,7 +13,7 @@ Authentication and authorisation serve distinct but complementary purposes:
 
 MyAccessID is used to authenticate a user’s identity, ensuring that the person attempting to log in is who they claim to be.
 
-However, successful authentication alone does not imply that a user is permitted to access a specific service. Keycloak is responsible for authorisation, verifying that the authenticated user has the appropriate permissions to access the requested application or resource.
+However, successful authentication alone does not imply that a user is authorised to access a specific service. Keycloak is responsible for authorisation, verifying that the authenticated user has the appropriate permissions to access the requested application or resource.
 
 ---
 
@@ -33,7 +33,7 @@ In this example, the user’s home institution is the University of Bristol and 
 
 ### Authorisation with Keycloak
 
-At this point, the user has successfully authenticated with Keycloak. The next step is to ensure that the user is authorised to access the requested service.
+At this point, the user has successfully authenticated to Keycloak using MyAccessID. The next step is to ensure that the user is authorised to access the requested service.
 
 In this architecture, Waldur is the source of truth for project membership and access rights. Keycloak acts as an authorisation broker, determining whether the authenticated user is permitted to access a given service.
 
@@ -158,9 +158,9 @@ In the BriCS implementation, the following additional realms are used:
 
 ![keycloak-realm](./images/bristol-keycloak-realm.png)
 
-1. **Isambard Realm**
+1. **`isambard` realm**
    The `isambard` realm is the primary realm used for BriCS services. It is used by user-facing BriCS services to authenticate both standard users and administrators.
-2. **Administrators Realm**
+2. **`administrators` realm**
    This realm is used for internal BriCS services that are accessed exclusively by the BriCS team.
 
 ### Supporting Users Without MyAccessID Institutional Access
@@ -215,8 +215,8 @@ For AIRRPortal logins, two additional realms are configured in Keycloak:
 ![airrportal-realm](./images/airrportal-keycloak-realm.png)
 
 1. `connector` realm
-   This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the existing MyAccessID connection configured for the `isambard` realm is reused.
-   By default, users are directed to the login page for the Connector realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option.
+   This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the external identity provider configuration for MyAccessID reuses the same settings as the existing MyAccessID connection configured for the `isambard` realm.
+   By default, users are directed to the login page for the `connector` realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option.
 2. `idp` realm
    This realm is dedicated to the email-based authenticator. It uses the [magic link plugin](https://github.com/p2-inc/keycloak-magic-link) to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the `connector` realm, so that users are redirected here when selecting the email-based login option.
 
@@ -238,7 +238,7 @@ An OIDC client is configured in this realm so that the `connector` realm can use
 
 ![idp-client-settings-1](./images/idp-realm-client-settings-1.png)
 
-The Root URL and Home URL are configured as shown. Web Origins is set to allow all origins.
+The `Root URL` and `Home URL` are configured as shown. `Web Origins` is set to allow all origins.
 
 The remaining client settings are shown below:
 
