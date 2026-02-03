@@ -130,11 +130,11 @@ Additionally, users authenticating via MyAccessID are configured to be automatic
 
 [Authentication flows](https://www.keycloak.org/docs/latest/server_admin/index.html#_authentication-flows) are configurable sequences of steps that determine how a user is authenticated and processed during login. In this context, the following flows are used:
 
-1. **`Auto Create and Link Account`**
+1. **Auto Create and Link Account**
    This flow uses two built-in executions, as shown below.
    ![keycloak-auto-create-account](./images/bristol-authz-create-acc.png)
    After authentication, a Keycloak user account is created if one does not already exist. If an account already exists, it is reused.
-2. **`Waldur Check Access`**
+2. **Waldur Check Access**
    This flow uses two custom Keycloak plugins to support authorisation and compliance, as shown below.
    ![keycloak-waldur-check-access](./images/bristol-authz-waldur-access.png)
    The source code for the Java plugins implementing these executions is available on [GitHub](https://github.com/isambard-sc/keycloakplugins/tree/main).  The **auth-plugin** is responsible for querying Waldur for project membership. Once the user is authenticated, the plugin uses the user’s email address to query Waldur and retrieve project membership information. The user is only permitted to log in if they are a member of at least one project.
@@ -194,9 +194,9 @@ AIRRPortal is the platform through which users apply for access to [AI Research 
 
 ![airrportal-idp-list](./images/airrportal-idp-list.png)
 
-As shown in the image above, AIRRPortal supports University Login using MyAccessID. Administrators authenticate using identities from AWS IAM Identity Center, which is configured as an external identity provider (IdP) in Keycloak. For users who cannot use MyAccessID, an email-based login option is also available.
+As shown in the image above, AIRRPortal supports University Login using MyAccessID. Administrators authenticate using identities from AWS IAM Identity Center. The email-based login option is available for users who cannot use MyAccessID.
 
-The email-based login verifies a user’s identity by confirming control of an email address. During authentication, Keycloak sends a one-time code or link to the user’s email address, which the user must present to complete the login process.
+The email-based login verifies a user’s identity by confirming control of an email address. When that email address is associated with an institutional account, this provides a similar level of assurance to MyAccessID authentication, which also relies on the user proving control of their institutional credentials. In the email-based flow, Keycloak sends a one-time code or link to the user’s email address, which must be presented to complete authentication.
 
 ![airrportal-email-authenticator-init-flow](./images/airrportal-email-authenticator-init.png)
 
@@ -208,7 +208,7 @@ Subsequent logins use a simplified flow using a one-time code sent to the user's
 
 As shown above, the user supplies the email address previously registered with the email authenticator and verifies their identity using the one-time code sent to their email.
 
-##### Configuring Realms
+##### Configuring Realms for the email-based authenticator
 
 For AIRRPortal logins, two additional realms are configured in Keycloak:
 
@@ -216,7 +216,7 @@ For AIRRPortal logins, two additional realms are configured in Keycloak:
 
 1. `connector` realm
    This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the external identity provider configuration for MyAccessID reuses the same settings as the existing MyAccessID connection configured for the `isambard` realm.
-   By default, users are directed to the login page for the `connector` realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option.
+   By default, users are directed to the login page for the `connector` realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option. When the email-based login option is selected, users are redirected to the `idp` realm.
 2. `idp` realm
    This realm is dedicated to the email-based authenticator. It uses the [magic link plugin](https://github.com/p2-inc/keycloak-magic-link) to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the `connector` realm, so that users are redirected here when selecting the email-based login option.
 
