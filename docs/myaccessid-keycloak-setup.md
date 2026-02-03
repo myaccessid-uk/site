@@ -158,9 +158,9 @@ In the BriCS implementation, the following additional realms are used:
 
 ![keycloak-realm](./images/bristol-keycloak-realm.png)
 
-1. **`isambard` realm**
+1. **isambard realm**
    The `isambard` realm is the primary realm used for BriCS services. It is used by user-facing BriCS services to authenticate both standard users and administrators.
-2. **`administrators` realm**
+2. **administrators realm**
    This realm is used for internal BriCS services that are accessed exclusively by the BriCS team.
 
 ### Supporting Users Without MyAccessID Institutional Access
