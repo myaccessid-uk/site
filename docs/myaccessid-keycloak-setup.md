@@ -13,7 +13,15 @@ Authentication and authorisation serve distinct but complementary purposes:
 
 MyAccessID is used to authenticate a user’s identity, ensuring that the person attempting to log in is who they claim to be.
 
-However, successful authentication alone does not imply that a user is authorised to access a specific service. Keycloak is responsible for authorisation, verifying that the authenticated user has the appropriate permissions to access the requested application or resource.
+However, successful authentication alone does not imply that a user is authorised to access a specific service.It should be ensured that the authenticated user has the appropriate permissions to access the requested application or resource before they are granted access.
+
+![overview](./images/bristol-authn-authz-overview.png)
+
+Here we cover how authentication and authorisation are implemented in the [BriCS Isambard-AI](https://www.bristol.ac.uk/research/centres/bristol-supercomputing/#isambard-ai) service. The following example demonstrates how federated identities and compliant authorisation are implemented to provide access to HPC services. The figure above shows a high-level overview of the workflow in which a user authenticates using their existing identity and is authorised to access the service. The key components used are:
+
+- [**Keycloak**](https://github.com/keycloak/keycloak) for authentication brokering and enforcing authorisation
+- [**MyAccessID**](https://wiki.geant.org/spaces/MyAccessID/pages/290717698/MyAccessID+Home) as the federated identity provider for institutional authentication
+- [**Waldur**](https://waldur.com/) as the authoritative source of project and membership data
 
 ---
 
@@ -21,7 +29,7 @@ However, successful authentication alone does not imply that a user is authorise
 
 ![requesting authenticated identity](./images/bristol-authn-req.png)
 
-The diagram above illustrates authentication using MyAccessID as implemented in the [BriCS](https://www.bristol.ac.uk/research/centres/bristol-supercomputing/) Isambard-AI service. In this example, a user attempts to log in to the project management application Waldur.
+The diagram above illustrates an example, where a user attempts to log in to Waldur.
 
 Keycloak acts as an identity broker between the application and the identity provider, i.e between Waldur and MyAccessID. When the user selects the “University Login (MyAccessID)” option on the Keycloak *Choose your identity provider* page, they are redirected to MyAccessID. MyAccessID then prompts the user to authenticate using their institutional credentials.
 
@@ -44,25 +52,23 @@ To make this decision, Keycloak queries Waldur using a custom Keycloak plugin, w
 
 This clear separation of authentication and authorisation using MyAccessID and Keycloak enables a secure, flexible, and policy-driven access control model.
 
-To better illustrate this, consider a DRI operating multiple facilities and services. For example, a user may belong to projects on the BriCS facilities Isambard-AI and Isambard3. BriCS may operate additional facilities, each hosting multiple projects.
+#### SSH Access Flow
+
+To better illustrate how authorisation is implemented, consider a DRI operating multiple facilities and services. For example, a user may belong to projects on the BriCS facilities Isambard-AI and [Isambard3](https://www.bristol.ac.uk/research/centres/bristol-supercomputing/#isambard-3). BriCS may operate additional facilities, each hosting multiple projects.
 
 When the user logs in, they should be able to access only the projects they are a member of across the facilities they are authorised for. They must not be able to access projects or facilities for which they have no authorisation.
 
 The diagram below illustrates the workflow of a user, `cwoods`, accessing projects on the Isambard-AI and Isambard3 clusters via SSH.
 
-At BriCS, access to facilities is performed using signed SSH certificates. This workflow involves the following components:
+At BriCS, access to facilities is performed using signed SSH certificates.This workflow involves the following components, in addition to those already covered in the previous section:
 
-- **Keycloak** for authentication and authorisation brokering
-- **Waldur** for authoritative project and membership data
-- **Conch** as the SSH Certificate Authority (SSH CA)
-- **Clifton** as the client-side tool used to request SSH certificates
+- [**Conch**](https://github.com/isambard-sc/conch) as the SSH Certificate Authority (SSH CA)
+- [**Clifton**](https://github.com/isambard-sc/clifton) as the client-side tool used to request SSH certificates
 
 In short, Clifton manages the lifecycle of SSH certificates issued by Conch. With this context, the typical SSH access flow is as follows. In this example, the user has access to:
 
 - `brics` project on Isambard-AI  
 - `demo` project on Isambard3  
-
-#### SSH Access Flow
 
 The SSH authorisation process consists of two distinct phases: an **authorisation request** and an **authorisation response**. The diagrams below illustrate the end-to-end flow.
 
@@ -123,6 +129,8 @@ To request these attributes from MyAccessID, the **Scopes** field under the adva
 ![keycloak-mappers](./images/bristol-keycloak-mappers.png)
 
 The corresponding **mappers** are configured in Keycloak to consume and map these attributes into the user account, as shown above.
+
+TODO: elaborate on mappers:- what are being mapped and how and touch on email being subject ID, compare configs for this and attributes with Cambridge
 
 Additionally, users authenticating via MyAccessID are configured to be automatically assigned to a dedicated Keycloak group using the **ForceMyAccessIDGroup Mapper**. This grouping simplifies management and policy enforcement for users who log in through MyAccessID.
 
