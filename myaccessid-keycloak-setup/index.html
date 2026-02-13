@@ -1,0 +1,1201 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://myaccessid-uk.github.io/site/myaccessid-keycloak-setup/">
+      
+      
+        <link rel="prev" href="../workshops/MyAccessID-Online-Workshop/">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Resources - MyAccessID UK Community</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#federated-iam-using-keycloak-and-myaccessid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MyAccessID UK Community"
+      class="md-header__button md-logo" aria-label="MyAccessID UK Community" data-md-component="logo">
+      
+  <img src="../assets/site_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            <a href="https://myaccessid-uk.github.io/site/" title="MyAccessID UK Community" aria-label="MyAccessID UK Community">MyAccessID UK Community</a>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Resources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <label class="md-header__button md-icon" for="__search">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MyAccessID UK Community"
+      class="md-nav__button md-logo" aria-label="MyAccessID UK Community" data-md-component="logo">
+      
+  <img src="../assets/site_logo.svg" alt="logo">
+
+    </a>
+    <a href="https://myaccessid-uk.github.io/site/" title="MyAccessID UK Community" aria-label="MyAccessID UK Community">MyAccessID UK Community</a>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../workshops/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshops
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workshops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/MyAccessID-Online-Workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MyAccessID Online Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-compliant-authentication-and-authorisation-with-myaccessid-and-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing Compliant Authentication and Authorisation with MyAccessID and Keycloak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing Compliant Authentication and Authorisation with MyAccessID and Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-vs-authorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication vs Authorisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-with-myaccessid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication with MyAccessID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-with-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation with Keycloak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authorisation with Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-access-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Access Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Access Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-request-path-user-keycloak-waldur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation Request Path (User → Keycloak → Waldur)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-response-path-waldur-keycloak-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation Response Path (Waldur → Keycloak → User)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-keycloak-to-myaccessid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting Keycloak to MyAccessID
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting Keycloak to MyAccessID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes-claims-and-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes, Claims, and Scopes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Realms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-users-without-myaccessid-institutional-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supporting Users Without MyAccessID Institutional Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supporting Users Without MyAccessID Institutional Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#airrportal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIRRPortal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AIRRPortal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-realms-for-the-email-based-authenticator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Realms for the email-based authenticator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Realms for the email-based authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-idp-realm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the idp realm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-connector-realm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the connector realm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../join-iam4dri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join IAM4DRI Mailing List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-compliant-authentication-and-authorisation-with-myaccessid-and-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing Compliant Authentication and Authorisation with MyAccessID and Keycloak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing Compliant Authentication and Authorisation with MyAccessID and Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-vs-authorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication vs Authorisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-with-myaccessid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication with MyAccessID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-with-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation with Keycloak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authorisation with Keycloak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-access-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Access Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Access Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-request-path-user-keycloak-waldur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation Request Path (User → Keycloak → Waldur)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation-response-path-waldur-keycloak-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorisation Response Path (Waldur → Keycloak → User)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-keycloak-to-myaccessid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting Keycloak to MyAccessID
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting Keycloak to MyAccessID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes-claims-and-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes, Claims, and Scopes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Realms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-users-without-myaccessid-institutional-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supporting Users Without MyAccessID Institutional Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supporting Users Without MyAccessID Institutional Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#airrportal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AIRRPortal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AIRRPortal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-realms-for-the-email-based-authenticator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Realms for the email-based authenticator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Realms for the email-based authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-idp-realm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the idp realm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-connector-realm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the connector realm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="federated-iam-using-keycloak-and-myaccessid">Federated IAM Using Keycloak and MyAccessID<a class="headerlink" href="#federated-iam-using-keycloak-and-myaccessid" title="Permanent link">&para;</a></h1>
+<p>This guide describes how to connect <a href="https://github.com/keycloak/keycloak">Keycloak</a>, an open-source Identity and Access Management (IAM) solution, with MyAccessID to implement a federated IAM architecture. The examples in this guide are based on implementations from DRI sites that use these tools to provide federated authentication and authorisation.</p>
+<h2 id="implementing-compliant-authentication-and-authorisation-with-myaccessid-and-keycloak">Implementing Compliant Authentication and Authorisation with MyAccessID and Keycloak<a class="headerlink" href="#implementing-compliant-authentication-and-authorisation-with-myaccessid-and-keycloak" title="Permanent link">&para;</a></h2>
+<h3 id="authentication-vs-authorisation">Authentication vs Authorisation<a class="headerlink" href="#authentication-vs-authorisation" title="Permanent link">&para;</a></h3>
+<p>Authentication and authorisation serve distinct but complementary purposes:</p>
+<ul>
+<li><strong>Authentication</strong> verifies <em>who</em> a user is.</li>
+<li><strong>Authorisation</strong> determines <em>what</em> an authenticated user is allowed to access.</li>
+</ul>
+<p>MyAccessID is used to authenticate a user’s identity, ensuring that the person attempting to log in is who they claim to be.</p>
+<p>However, successful authentication alone does not imply that a user is authorised to access a specific service.It should be ensured that the authenticated user has the appropriate permissions to access the requested application or resource before they are granted access.</p>
+<p><img alt="overview" src="../images/bristol-authn-authz-overview.png" /></p>
+<p>Here we cover how authentication and authorisation are implemented in the <a href="https://www.bristol.ac.uk/research/centres/bristol-supercomputing/#isambard-ai">BriCS Isambard-AI</a> service. The following example demonstrates how federated identities and compliant authorisation are implemented to provide access to HPC services. The figure above shows a high-level overview of the workflow in which a user authenticates using their existing identity and is authorised to access the service. The key components used are:</p>
+<ul>
+<li><a href="https://github.com/keycloak/keycloak"><strong>Keycloak</strong></a> for authentication brokering and enforcing authorisation</li>
+<li><a href="https://wiki.geant.org/spaces/MyAccessID/pages/290717698/MyAccessID+Home"><strong>MyAccessID</strong></a> as the federated identity provider for institutional authentication</li>
+<li><a href="https://waldur.com/"><strong>Waldur</strong></a> as the authoritative source of project and membership data</li>
+</ul>
+<hr />
+<h3 id="authentication-with-myaccessid">Authentication with MyAccessID<a class="headerlink" href="#authentication-with-myaccessid" title="Permanent link">&para;</a></h3>
+<p><img alt="requesting authenticated identity" src="../images/bristol-authn-req.png" /></p>
+<p>The diagram above illustrates an example, where a user attempts to log in to Waldur.</p>
+<p>Keycloak acts as an identity broker between the application and the identity provider, i.e between Waldur and MyAccessID. When the user selects the “University Login (MyAccessID)” option on the Keycloak <em>Choose your identity provider</em> page, they are redirected to MyAccessID. MyAccessID then prompts the user to authenticate using their institutional credentials.</p>
+<p><img alt="receiving authenticated identity" src="../images/bristol-authn-recv.png" /></p>
+<p>In this example, the user’s home institution is the University of Bristol and they login using their institutional account. After successful authentication, MyAccessID sends the user’s identity attributes—such as email address, first name, and last name—back to Keycloak.</p>
+<hr />
+<h3 id="authorisation-with-keycloak">Authorisation with Keycloak<a class="headerlink" href="#authorisation-with-keycloak" title="Permanent link">&para;</a></h3>
+<p>At this point, the user has successfully authenticated to Keycloak using MyAccessID. The next step is to ensure that the user is authorised to access the requested service.</p>
+<p>In this architecture, Waldur is the source of truth for project membership and access rights. Keycloak acts as an authorisation broker, determining whether the authenticated user is permitted to access a given service.</p>
+<p>To make this decision, Keycloak queries Waldur using a custom Keycloak plugin, which retrieves the user’s project and facility memberships.</p>
+<ul>
+<li>If the user is authorised, Keycloak allows the login flow to continue and issues the appropriate tokens.</li>
+<li>If the user is not authorised, access is denied and the login attempt fails.</li>
+</ul>
+<p>This clear separation of authentication and authorisation using MyAccessID and Keycloak enables a secure, flexible, and policy-driven access control model.</p>
+<h4 id="ssh-access-flow">SSH Access Flow<a class="headerlink" href="#ssh-access-flow" title="Permanent link">&para;</a></h4>
+<p>To better illustrate how authorisation is implemented, consider a DRI operating multiple facilities and services. For example, a user may belong to projects on the BriCS facilities Isambard-AI and <a href="https://www.bristol.ac.uk/research/centres/bristol-supercomputing/#isambard-3">Isambard3</a>. BriCS may operate additional facilities, each hosting multiple projects.</p>
+<p>When the user logs in, they should be able to access only the projects they are a member of across the facilities they are authorised for. They must not be able to access projects or facilities for which they have no authorisation.</p>
+<p>The diagram below illustrates the workflow of a user, <code>cwoods</code>, accessing projects on the Isambard-AI and Isambard3 clusters via SSH.</p>
+<p>At BriCS, access to facilities is performed using signed SSH certificates.This workflow involves the following components, in addition to those already covered in the previous section:</p>
+<ul>
+<li><a href="https://github.com/isambard-sc/conch"><strong>Conch</strong></a> as the SSH Certificate Authority (SSH CA)</li>
+<li><a href="https://github.com/isambard-sc/clifton"><strong>Clifton</strong></a> as the client-side tool used to request SSH certificates</li>
+</ul>
+<p>In short, Clifton manages the lifecycle of SSH certificates issued by Conch. With this context, the typical SSH access flow is as follows. In this example, the user has access to:</p>
+<ul>
+<li><code>brics</code> project on Isambard-AI  </li>
+<li><code>demo</code> project on Isambard3  </li>
+</ul>
+<p>The SSH authorisation process consists of two distinct phases: an <strong>authorisation request</strong> and an <strong>authorisation response</strong>. The diagrams below illustrate the end-to-end flow.</p>
+<h5 id="authorisation-request-path-user-keycloak-waldur">Authorisation Request Path (User → Keycloak → Waldur)<a class="headerlink" href="#authorisation-request-path-user-keycloak-waldur" title="Permanent link">&para;</a></h5>
+<p><img alt="authorisation request flow" src="../images/bristol-authz-req.png" /></p>
+<p>This diagram shows how an SSH authorisation request propagates from the user, through Keycloak, to Waldur.</p>
+<ol>
+<li>The user requests an SSH certificate from <strong>Clifton</strong> in order to access BriCS facilities.</li>
+<li>Clifton, which is registered as an OIDC client in Keycloak, initiates an authorisation request via <strong>Conch</strong>, the SSH Certificate Authority.</li>
+<li>Conch redirects the user to <strong>Keycloak</strong> to determine which facilities and projects the user is authorised to access.</li>
+<li>The user authenticates using <strong>MyAccessID</strong> using their institutional identity.</li>
+<li>Keycloak queries <strong>Waldur</strong>, via a <a href="https://github.com/isambard-sc/keycloakplugins/tree/main/keycloak-isambard-auth-plugin">custom plugin</a>, to retrieve the user’s project memberships.</li>
+</ol>
+<hr />
+<h5 id="authorisation-response-path-waldur-keycloak-user">Authorisation Response Path (Waldur → Keycloak → User)<a class="headerlink" href="#authorisation-response-path-waldur-keycloak-user" title="Permanent link">&para;</a></h5>
+<p><img alt="authorisation response flow" src="../images/bristol-authz-recv.png" /></p>
+<p>This diagram shows how the authorisation decision is returned from Waldur, via Keycloak, back to the user.</p>
+<ol>
+<li><strong>Waldur</strong> responds to Keycloak's request with the list of projects and facilities the user is authorised to access.</li>
+<li><strong>Keycloak</strong> presents an authorisation prompt to the user. Upon approval, the authorisation context is returned to Conch.</li>
+<li><strong>Conch</strong> signs the user’s SSH public key and returns the signed certificate.</li>
+<li><strong>Clifton</strong> receives the signed certificate, and the user can access the authorised projects via SSH.</li>
+</ol>
+<h3 id="connecting-keycloak-to-myaccessid">Connecting Keycloak to MyAccessID<a class="headerlink" href="#connecting-keycloak-to-myaccessid" title="Permanent link">&para;</a></h3>
+<p>Follow the guidance provided in the official <a href="https://wiki.geant.org/spaces/MyAccessID/pages/867205135/Connecting+a+Keycloak+RP">MyAccessID documentation for connecting Keycloak</a> to configure Keycloak for integration with MyAccessID.</p>
+<p>The section below highlights configuration settings that are not explicitly covered in the official documentation, but are included here as a reference from the current configuration at BriCS.</p>
+<p><img alt="keycloak-advanced-settings" src="../images/bristol-keycloak-advanced.png" /></p>
+<p>The <strong>Trust Email</strong> option is enabled because the email address provided by MyAccessID is verified. Users authenticate to MyAccessID using their institutional credentials, and the email attribute returned is associated with that verified institutional identity.</p>
+<p>Keycloak is configured to automatically create user accounts the first time a user logs in via MyAccessID. To enable this behaviour, set the <strong>First Login Flow Override</strong> to <code>Auto Create and Link Account</code>. <strong>Post Login Flow</strong> is configured as <code>Waldur Check Access</code>. This enables Keycloak to evaluate whether an authenticated user is authorised to access services based on information retrieved from Waldur. In addition, the flow enforces compliance by ensuring that the user has accepted the latest Access Terms, Acceptable Use Policy, and Data Privacy Policy. These aspects are described in more detail in the section covering Authentication Flows.</p>
+<p><strong>Sync Mode</strong> is set to <code>Force</code>so that the attributes received from MyAccessID are always updated in the user account using the attribute mappers discussed below.</p>
+<h4 id="attributes-claims-and-scopes">Attributes, Claims, and Scopes<a class="headerlink" href="#attributes-claims-and-scopes" title="Permanent link">&para;</a></h4>
+<p>The configuration of attributes, along with their corresponding scopes and claims, may vary between DRI sites depending on local requirements.
+For example, at BriCS, the attributes of interest are:</p>
+<ul>
+<li>Email address  </li>
+<li>First name  </li>
+<li>Last name  </li>
+</ul>
+<p>To request these attributes from MyAccessID, the <strong>Scopes</strong> field under the advanced settings is configured as:</p>
+<p><code>openid profile email</code></p>
+<p><img alt="keycloak-mappers" src="../images/bristol-keycloak-mappers.png" /></p>
+<p>Note that <code>openid</code> is the default scope when using OIDC authentication. This is a mandatory scope as defined by the OIDC specification, and the associated <code>sub</code> claim uniquely identifies the user. For MyAccessID, this corresponds to the <a href="https://wiki.geant.org/spaces/MyAccessID/pages/685769423/Attributes+available+to+Relying+Parties#AttributesavailabletoRelyingParties-CommunityUserIdentifier">Community User Identifier</a>.</p>
+<p>To consume the required claims and map them to attributes in the user account, <strong>mappers</strong> are configured as shown above. The relationship between the claims in the OIDC token and the attributes in Keycloak is shown below:</p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Mapper Type</th>
+<th>Attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>Attribute Importer</td>
+<td>email</td>
+</tr>
+<tr>
+<td>given_name</td>
+<td>Attribute Importer</td>
+<td>firstName</td>
+</tr>
+<tr>
+<td>family_name</td>
+<td>Attribute Importer</td>
+<td>lastName</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, users authenticating via MyAccessID are configured to be automatically assigned to a dedicated Keycloak group using the <strong>ForceMyAccessIDGroup Mapper</strong>. This grouping simplifies management and policy enforcement for users who log in through MyAccessID.</p>
+<h4 id="authentication-flows">Authentication Flows<a class="headerlink" href="#authentication-flows" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.keycloak.org/docs/latest/server_admin/index.html#_authentication-flows">Authentication flows</a> are configurable sequences of steps that determine how a user is authenticated and processed during login. In this context, the following flows are used:</p>
+<ol>
+<li><strong>Auto Create and Link Account</strong>
+   This flow uses two built-in executions, as shown below.
+   <img alt="keycloak-auto-create-account" src="../images/bristol-authz-create-acc.png" />
+   After authentication, a Keycloak user account is created if one does not already exist. If an account already exists, it is reused.</li>
+<li><strong>Waldur Check Access</strong>
+   This flow uses two custom Keycloak plugins to support authorisation and compliance, as shown below.
+   <img alt="keycloak-waldur-check-access" src="../images/bristol-authz-waldur-access.png" />
+   The source code for the Java plugins implementing these executions is available on <a href="https://github.com/isambard-sc/keycloakplugins/tree/main">GitHub</a>.  The <strong>auth-plugin</strong> is responsible for querying Waldur for project membership. Once the user is authenticated, the plugin uses the user’s email address to query Waldur and retrieve project membership information. The user is only permitted to log in if they are a member of at least one project.
+   After this check, the <strong>tandc-plugin</strong> ensures that the user has accepted the latest Access Terms, Acceptable Use Policy, and Data Privacy Policy.
+   <img alt="keycloak-tandc-prmopt" src="../images/bristol-authz-access-terms.png" />
+   Once these conditions are satisfied, authorisation is complete and the user is granted access to the requested service.</li>
+</ol>
+<p>To support these flows, the Keycloak <strong>User Profile</strong> is extended to store additional information.</p>
+<p><img alt="keycloak-user-profile" src="../images/bristol-user-profile.png" /></p>
+<p>As shown above, the realm’s User Profile includes additional fields such as <code>projects</code>, which record the projects the user is authorised to access, as well as fields that capture policy acceptance state: <code>tandc_accepted</code>, <code>dpriv_accepted</code>, and <code>ause_accepted</code>. The <code>short_name</code> field is used by Clifton to support SSH access.</p>
+<h4 id="realms">Realms<a class="headerlink" href="#realms" title="Permanent link">&para;</a></h4>
+<p>Keycloak is a multi-tenant system in which realms are used to separate different tenants. Each tenant can have its own independent set of users, groups, roles, clients and identity providers.</p>
+<p>Out of the box, Keycloak includes a privileged <strong><code>master</code> realm</strong>, which is used to manage the Keycloak server itself, for example, to create and administer other realms. Due to its elevated privileges, this realm is tightly restricted and is used only for operations that require high-level administrative access.</p>
+<p>In the BriCS implementation, the following additional realms are used:</p>
+<p><img alt="keycloak-realm" src="../images/bristol-keycloak-realm.png" /></p>
+<ol>
+<li><strong>isambard realm</strong>
+   The <code>isambard</code> realm is the primary realm used for BriCS services. It is used by user-facing BriCS services to authenticate both standard users and administrators.</li>
+<li><strong>administrators realm</strong>
+   This realm is used for internal BriCS services that are accessed exclusively by the BriCS team.</li>
+</ol>
+<h3 id="supporting-users-without-myaccessid-institutional-access">Supporting Users Without MyAccessID Institutional Access<a class="headerlink" href="#supporting-users-without-myaccessid-institutional-access" title="Permanent link">&para;</a></h3>
+<p>As the service evolves, there is a need to support users whose institutions are not part of MyAccessID(eduGAIN). In the current BriCS deployment, several approaches are used to accommodate these users.</p>
+<p><img alt="keycloak-idp-list" src="../images/bristol-idp-list.png" /></p>
+<p>The figure above shows the identity providers currently linked to the BriCS Keycloak instance. Depending on their affiliation, users select the appropriate option from the list to log in.</p>
+<ol>
+<li><strong>University Login (MyAccessID)</strong>
+   Uses the MyAccessID integration described earlier and allows users whose institutions participate in MyAccessID to log in using their institutional credentials.</li>
+<li><strong>AISI (Okta Login)</strong>
+   As <a href="https://www.aisi.gov.uk/">AISI</a> is a significant user of BriCS services, its Okta identity platform is configured as an external identity provider. This allows AISI users to log in using their existing Okta identities.</li>
+<li><strong>NCC Login</strong>
+   Used by <a href="https://www.nccuk.com/">NCC</a> users to log in with their Microsoft Entra ID accounts.</li>
+<li><strong>Other Login (IdP of Last Resort)</strong>
+   This option is used for users who are not part of MyAccessID or the institutions listed above. These users authenticate using identities that are manually created in AWS IAM Identity Center.</li>
+<li><strong>BriCS (Administrators Only)</strong>
+   Used exclusively by BriCS service administrators. This option also relies on identities managed in AWS IAM Identity Center.</li>
+</ol>
+<p>If there is a sufficient number of users from an organisation, it can be beneficial to support that organisation's identity provider directly if it is not currently part of MyAccessID, as is the case for AISI and ncc.</p>
+<p>For organisations that are not part of MyAccessID, user identities must currently be created and managed manually in AWS. As the range of services offered by BriCS grows and the user base expands to include small and medium-sized organisations that are not part of MyAccessID, this approach becomes increasingly difficult to scale. Additionally, there may be situations where the MyAccessID service is unavailable, in which case users who rely on it for authentication would be unable to log in.</p>
+<p>One possible approach to address these challenges is to use an email-based authenticator, as is currently implemented in <a href="https://portal-airr.isambard.ac.uk/login/">AIRRPortal</a>.</p>
+<h4 id="airrportal">AIRRPortal<a class="headerlink" href="#airrportal" title="Permanent link">&para;</a></h4>
+<p>AIRRPortal is the platform through which users apply for access to <a href="https://www.gov.uk/government/publications/ai-research-resource">AI Research Resources</a>. Users authenticate to AIRRPortal using Keycloak and ease of access to the platform is an important consideration.</p>
+<p><img alt="airrportal-idp-list" src="../images/airrportal-idp-list.png" /></p>
+<p>As shown in the image above, AIRRPortal supports University Login using MyAccessID. Administrators authenticate using identities from AWS IAM Identity Center. The email-based login option is available for users who cannot use MyAccessID.</p>
+<p>The email-based login verifies a user’s identity by confirming control of an email address. When that email address is associated with an institutional account, this provides a similar level of assurance to MyAccessID authentication, which also relies on the user proving control of their institutional credentials. In the email-based flow, Keycloak sends a one-time code or link to the user’s email address, which must be presented to complete authentication.</p>
+<p><img alt="airrportal-email-authenticator-init-flow" src="../images/airrportal-email-authenticator-init.png" /></p>
+<p>When a user logs in using the email authenticator for the first time, a Keycloak account is automatically created as part of the authentication flow. Initial registration uses a dedicated mechanism in which the user’s email address is verified via a magic link. Once the user accesses the link sent to their email, authentication is completed and the user is logged in to AIRRPortal.</p>
+<p>Subsequent logins use a simplified flow using a one-time code sent to the user's email address.</p>
+<p><img alt="airrportal-email-authenticator-flow" src="../images/airrportal-email-authenticator.png" /></p>
+<p>As shown above, the user supplies the email address previously registered with the email authenticator and verifies their identity using the one-time code sent to their email.</p>
+<h5 id="configuring-realms-for-the-email-based-authenticator">Configuring Realms for the email-based authenticator<a class="headerlink" href="#configuring-realms-for-the-email-based-authenticator" title="Permanent link">&para;</a></h5>
+<p>For AIRRPortal logins, two additional realms are configured in Keycloak:</p>
+<p><img alt="airrportal-realm" src="../images/airrportal-keycloak-realm.png" /></p>
+<ol>
+<li><code>connector</code> realm
+   This realm is used for standard users logging in via MyAccessID and email-based logins, as well as for administrators authenticating using identities from AWS IAM Identity Center. Because this realm resides within the same Keycloak instance operated by BriCS, the external identity provider configuration for MyAccessID reuses the same settings as the existing MyAccessID connection configured for the <code>isambard</code> realm.
+   By default, users are directed to the login page for the <code>connector</code> realm when accessing AIRRPortal. From there, depending on whether they can use MyAccessID, they choose either University Login using MyAccessID or the email-based login option. When the email-based login option is selected, users are redirected to the <code>idp</code> realm.</li>
+<li><code>idp</code> realm
+   This realm is dedicated to the email-based authenticator. It uses the <a href="https://github.com/p2-inc/keycloak-magic-link">magic link plugin</a> to allow users to authenticate using a code sent to their email address when they log in through this realm. An OIDC client configured in this realm is set up as an identity provider in the <code>connector</code> realm, so that users are redirected here when selecting the email-based login option.</li>
+</ol>
+<h6 id="setting-up-the-idp-realm">Setting up the <code>idp</code> realm<a class="headerlink" href="#setting-up-the-idp-realm" title="Permanent link">&para;</a></h6>
+<p>The realm is configured to allow users to register and log in using their email address.</p>
+<p><img alt="idp-realm-login" src="../images/idp-realm-login-conf.png" /></p>
+<p>As shown in the realm settings, <code>User registration</code> is enabled. <code>Login with email</code> is turned on, with <code>Email as username</code> and <code>Verify email</code> enabled.</p>
+<p>The built-in browser-based authentication flow is modified as follows:</p>
+<p><img alt="idp-realm-browser-auth" src="../images/idp-realm-browser-auth-flow.png" /></p>
+<p>This is created from a copy of the default browser flow is created. This is then edited as shown above, and set as the default using the <code>actions</code> menu in the top-right of the window.</p>
+<p>An OIDC client is configured in this realm so that the <code>connector</code> realm can use it as an identity provider.</p>
+<p><img alt="idp-client-settings-1" src="../images/idp-realm-client-settings-1.png" /></p>
+<p>The <code>Root URL</code> and <code>Home URL</code> are configured as shown. <code>Web Origins</code> is set to allow all origins.</p>
+<p>The remaining client settings are shown below:</p>
+<p><img alt="idp-client-settings-2" src="../images/idp-realm-client-settings-2.png" /></p>
+<p><code>Client authentication</code> is enabled, as this is not a public client and requires a pre-shared client secret. <code>Front-channel logout</code> is also enabled.</p>
+<h6 id="setting-up-the-connector-realm">Setting up the connector realm<a class="headerlink" href="#setting-up-the-connector-realm" title="Permanent link">&para;</a></h6>
+<p>An identity provider is configured in the <code>connector</code> realm using the details of the client defined in the <code>idp</code> realm.</p>
+<p><img alt="connector-idp-settings-1" src="../images/connector-realm-idp-settings-1.png" /></p>
+<p>The previously configured <code>Client ID</code> and the <code>Client Secret</code> generated for the client in the IdP realm are used here.</p>
+<p>Advanced settings are configured as shown below:</p>
+<p><img alt="connector-idp-settings-2" src="../images/connector-realm-idp-settings-2.png" /></p>
+<p><code>Trust Email</code> is enabled, as the email address returned by the IdP realm has already been verified. <code>First Login Flow Override</code> is set to use a modified authentication flow, shown below.</p>
+<p><img alt="connector-first-login-flow" src="../images/connector-realm-first-login-flow.png" /></p>
+<p>A copy of the default flow is created, edited as shown above, and set as the default using the <code>actions</code> menu in the top-left of the window.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
