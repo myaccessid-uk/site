@@ -113,14 +113,12 @@ Keycloak is configured to automatically create user accounts the first time a us
 
 #### Attributes, Claims, and Scopes
 
-The configuration of attributes, claims, and scopes may vary between DRI sites depending on local requirements.
-
+The configuration of attributes, along with their corresponding scopes and claims, may vary between DRI sites depending on local requirements.
 For example, at BriCS, the attributes of interest are:
 
 - Email address  
 - First name  
 - Last name  
-- Community User Identifier  
 
 To request these attributes from MyAccessID, the **Scopes** field under the advanced settings is configured as:
 
@@ -128,9 +126,15 @@ To request these attributes from MyAccessID, the **Scopes** field under the adva
 
 ![keycloak-mappers](./images/bristol-keycloak-mappers.png)
 
-The corresponding **mappers** are configured in Keycloak to consume and map these attributes into the user account, as shown above.
+Note that `openid` is the default scope when using OIDC authentication. This is a mandatory scope as defined by the OIDC specification, and the associated `sub` claim uniquely identifies the user. For MyAccessID, this corresponds to the [Community User Identifier](https://wiki.geant.org/spaces/MyAccessID/pages/685769423/Attributes+available+to+Relying+Parties#AttributesavailabletoRelyingParties-CommunityUserIdentifier).
 
-TODO: elaborate on mappers:- what are being mapped and how and touch on email being subject ID, compare configs for this and attributes with Cambridge
+To consume the required claims and map them to attributes in the user account, **mappers** are configured as shown above. The relationship between the claims in the OIDC token and the attributes in Keycloak is shown below:
+
+| Claim       | Mapper Type        | Attribute  |
+|-------------|--------------------|------------|
+| email       | Attribute Importer | email      |
+| given_name  | Attribute Importer | firstName  |
+| family_name | Attribute Importer | lastName   |
 
 Additionally, users authenticating via MyAccessID are configured to be automatically assigned to a dedicated Keycloak group using the **ForceMyAccessIDGroup Mapper**. This grouping simplifies management and policy enforcement for users who log in through MyAccessID.
 
