@@ -1,18 +1,25 @@
-# Workshops
+# Events
 
-## Upcoming Workshops
+See below for information about talks and workshops from the MyAccessID UK user community.
 
-See below for information about upcoming MyAccessID UK User Community Workshops
+## Upcoming Events
 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Information page                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
+| 2026-02-26 | Poster: Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Spring Conference, 2026] [nfcs-spring-conf] | :material-check: | :material-close: | [Event Details](https://indico.ph.qmul.ac.uk/event/2367/) |
 
-## Past sessions
+## Past Events
 
 | Date/time                 | Subject                 | Event/Location                      | In-person        | Online           |
 | ------------------------- | ----------------------- | ----------------------------------- | ---------------- | ---------------- |
+| 2025-12-03 | [Poster: Identity Federation for Research Cloud with MyAccessID] [ciuk-poster] | [CIUK 2025, Manchester] [ciuk-manchester] | :material-check: | :material-close: |
 | 2025-12-02<br>10:00-12:00 | Introduction to Federated User Authentication with MyAccessID | [MyAccessID Online Workshop] [myaccessid-online-workshop] | :material-close: | :material-check: |
-| 2025-09-22<br>14:30-15:00 | Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Autumn Conference][nfcs-autumn-conf], University of Edinburgh, UK | :material-check: | :material-check: |
+| 2025-10-22<br>11:45-12:15 | Federated Access Management for UK DRIs: Building a Community of Practice | [HPC-SIG Meeting, Hartree] [cop-online-workshop] | :material-close: | :material-check: |
+| 2025-09-22<br>14:30-15:00 | Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Autumn Conference, 2025][nfcs-autumn-conf], University of Edinburgh, UK | :material-check: | :material-check: |
 
 [myaccessid-online-workshop]: MyAccessID-Online-Workshop.md
+[cop-online-workshop]: https://hpc-sig.org.uk/contributions/2025/hpc-sig-hartree-contributions/#Federated-Access-Management-for-UK-DRIs
 [nfcs-autumn-conf]: https://nfcs-networkplus.ac.uk/events/connected-for-impact-exploring-federation-for-industry-and-public-sector/
+[ciuk-manchester]: https://www.sc.stfc.ac.uk/ciuk-2025/
+[nfcs-spring-conf]: https://nfcs-networkplus.ac.uk/events/nfcs-networkplus-spring-conference-2026/
+[ciuk-poster]: ../slides/ucl-ciuk-poster.pptx

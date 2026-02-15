@@ -7,7 +7,7 @@ theme:
     custom_dir: overrides
     palette:
         primary: custom
-    logo: assets/site_logo.svg
+    #logo: assets/site_logo.svg
     favicon: assets/favicon.png
     features:
         - navigation.indexes
