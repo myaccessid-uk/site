@@ -7,6 +7,8 @@ See below for information about talks and workshops from the MyAccessID UK user 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Information page                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
 | 2026-02-26 | Poster: Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Spring Conference, 2026] [nfcs-spring-conf] | :material-check: | :material-close: | [Event Details](https://indico.ph.qmul.ac.uk/event/2367/) |
+| 2026-04-28<br>10:00-12:00|  | MyAccessID UK Online Workshop | :material-close: | :material-check: |[Register Here][registration-link] |
+| 2026-07-06<br>10:00-16:00|  | MyAccessID UK In Person Workshop | :material-check: | :material-close: |[Register Here][registration-link] |
 
 ## Past Events
 
@@ -23,3 +25,4 @@ See below for information about talks and workshops from the MyAccessID UK user 
 [ciuk-manchester]: https://www.sc.stfc.ac.uk/ciuk-2025/
 [nfcs-spring-conf]: https://nfcs-networkplus.ac.uk/events/nfcs-networkplus-spring-conference-2026/
 [ciuk-poster]: ../slides/ucl-ciuk-poster.pptx
+[registration-link]: https://forms.office.com/e/bV980dqCUy
