@@ -4,16 +4,18 @@ See below for information about talks and workshops from the MyAccessID UK user 
 
 ## Upcoming Events
 
-| Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Information page                       |
+One registration form covers both upcoming workshops: [Register here][registration-link].
+
+| Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-02-26 | Poster: Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Spring Conference, 2026] [nfcs-spring-conf] | :material-check: | :material-close: | [Event Details](https://indico.ph.qmul.ac.uk/event/2367/) |
-| 2026-04-28<br>10:00-12:00|  | MyAccessID UK Online Workshop | :material-close: | :material-check: |[Register Here][registration-link] |
-| 2026-07-06<br>10:00-16:00|  | MyAccessID UK In Person Workshop | :material-check: | :material-close: |[Register Here][registration-link] |
+| 2026-04-28<br>10:00-12:00 | TBC | MyAccessID UK Online Workshop | :material-close: | :material-check: | [Register][registration-link] |
+| 2026-07-06<br>10:00-16:00 | TBC | MyAccessID UK In Person Workshop | :material-check: | :material-close: | [Register][registration-link] |
 
 ## Past Events
 
 | Date/time                 | Subject                 | Event/Location                      | In-person        | Online           |
 | ------------------------- | ----------------------- | ----------------------------------- | ---------------- | ---------------- |
+| 2026-02-26 | Poster: How can the UK Support MyAccessID | [NFCS NetworkPlus Spring Conference, 2026] [nfcs-spring-conf] | :material-check: | :material-close: |
 | 2025-12-03 | [Poster: Identity Federation for Research Cloud with MyAccessID] [ciuk-poster] | [CIUK 2025, Manchester] [ciuk-manchester] | :material-check: | :material-close: |
 | 2025-12-02<br>10:00-12:00 | Introduction to Federated User Authentication with MyAccessID | [MyAccessID Online Workshop] [myaccessid-online-workshop] | :material-close: | :material-check: |
 | 2025-10-22<br>11:45-12:15 | Federated Access Management for UK DRIs: Building a Community of Practice | [HPC-SIG Meeting, Hartree] [cop-online-workshop] | :material-close: | :material-check: |
