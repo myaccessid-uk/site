@@ -8,7 +8,7 @@ One registration form covers both upcoming workshops: [Register here][registrati
 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-04-28<br>10:00-12:00 | TBC | MyAccessID UK Online Workshop | :material-close: | :material-check: | [Register][registration-link] |
+| 2026-04-28<br>10:00-12:00 | Access Models Beyond Federated Identity Providers | MyAccessID UK Online Workshop | :material-close: | :material-check: | [Details][myaccessid-online-workshop-apr-2026] · [Register][registration-link] |
 | 2026-07-06<br>10:00-16:00 | TBC | MyAccessID UK In Person Workshop | :material-check: | :material-close: | [Register][registration-link] |
 
 ## Past Events
@@ -21,7 +21,8 @@ One registration form covers both upcoming workshops: [Register here][registrati
 | 2025-10-22<br>11:45-12:15 | Federated Access Management for UK DRIs: Building a Community of Practice | [HPC-SIG Meeting, Hartree] [cop-online-workshop] | :material-close: | :material-check: |
 | 2025-09-22<br>14:30-15:00 | Exploring the governance requirements for enabling UK DRIs to adopt MyAccessID | [NFCS NetworkPlus Autumn Conference, 2025][nfcs-autumn-conf], University of Edinburgh, UK | :material-check: | :material-check: |
 
-[myaccessid-online-workshop]: MyAccessID-Online-Workshop.md
+[myaccessid-online-workshop]: MyAccessID-Online-Workshop-Dec-2025.md
+[myaccessid-online-workshop-apr-2026]: MyAccessID-Online-Workshop-April-2026.md
 [cop-online-workshop]: https://hpc-sig.org.uk/contributions/2025/hpc-sig-hartree-contributions/#Federated-Access-Management-for-UK-DRIs
 [nfcs-autumn-conf]: https://nfcs-networkplus.ac.uk/events/connected-for-impact-exploring-federation-for-industry-and-public-sector/
 [ciuk-manchester]: https://www.sc.stfc.ac.uk/ciuk-2025/
