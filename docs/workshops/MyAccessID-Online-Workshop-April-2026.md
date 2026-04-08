@@ -52,7 +52,7 @@ Or visit the mailing list homepage:
 
 - **[IAM4DRI mailing list homepage][mail-list-homepage]**
 
-[s1]: #Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation
+[s1]: #session-1-identity-connectors-extending-authentication-beyond-myaccessid-federation
 [s2]: #session-2-challenge-or-not-of-getting-a-myaccessid-connection
 [s3]: #session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant
 [registration-link]: https://forms.office.com/e/bV980dqCUy
