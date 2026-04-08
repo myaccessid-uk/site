@@ -1,0 +1,814 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://myaccessid-uk.github.io/site/workshops/MyAccessID-Online-Workshop-April-2026/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../MyAccessID-Online-Workshop-Dec-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Access Models Beyond Federated Identity Providers - MyAccessID UK Community</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#access-models-beyond-federated-identity-providers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MyAccessID UK Community"
+      class="md-header__button md-logo" aria-label="MyAccessID UK Community" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            <a href="https://myaccessid-uk.github.io/site/" title="MyAccessID UK Community" aria-label="MyAccessID UK Community">MyAccessID UK Community</a>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Access Models Beyond Federated Identity Providers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <label class="md-header__button md-icon" for="__search">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MyAccessID UK Community"
+      class="md-nav__button md-logo" aria-label="MyAccessID UK Community" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <a href="https://myaccessid-uk.github.io/site/" title="MyAccessID UK Community" aria-label="MyAccessID UK Community">MyAccessID UK Community</a>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workshops
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workshops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access Models Beyond Federated Identity Providers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access Models Beyond Federated Identity Providers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workshop-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Agenda
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-abstracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Abstracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Abstracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-1-identity-connectors-extending-authentication-beyond-myaccessid-federation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-2-challenge-or-not-of-getting-a-myaccessid-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 2 – Challenge, or not, of getting a MyAccessID connection?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 3 – How many attributes to fetch? And are they trustworthy and compliant?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailing-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mailing list
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MyAccessID-Online-Workshop-Dec-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MyAccessID Online Workshop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../myaccessid-keycloak-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    
+    
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../join-iam4dri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join IAM4DRI Mailing List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workshop-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workshop Agenda
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-abstracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Abstracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Abstracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-1-identity-connectors-extending-authentication-beyond-myaccessid-federation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-2-challenge-or-not-of-getting-a-myaccessid-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 2 – Challenge, or not, of getting a MyAccessID connection?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session 3 – How many attributes to fetch? And are they trustworthy and compliant?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailing-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mailing list
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="access-models-beyond-federated-identity-providers">Access Models Beyond Federated Identity Providers<a class="headerlink" href="#access-models-beyond-federated-identity-providers" title="Permanent link">&para;</a></h1>
+<p>The MyAccessID UK User Community is hosting a two-hour online workshop via Microsoft Teams on 28<sup>th</sup> April 2026 from 10:00 am to 12:00 pm.</p>
+<p>This workshop will present the current progress of MyAccessID adoption by UK sites, explore ideas for future directions, and provide an opportunity for community discussion and engagement across three themed sessions. Each session opens with a brief presentation on the current direction of travel for sites using MyAccessID, followed by a Q&amp;A and open discussion to gather feedback and input from the wider community.</p>
+<div class="admonition tip">
+<p class="admonition-title">Register</p>
+<p><a href="https://forms.office.com/e/bV980dqCUy"><strong>Register to attend this workshop</strong></a></p>
+</div>
+<h2 id="workshop-agenda">Workshop Agenda<a class="headerlink" href="#workshop-agenda" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Start Time</th>
+<th>Session</th>
+<th>Speaker / Organisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:00</td>
+<td>Introduction</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10:10</td>
+<td><a href="#session-1-connector">Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation</a></td>
+<td>University of Cambridge</td>
+</tr>
+<tr>
+<td>10:40</td>
+<td>Q &amp; A</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10:45</td>
+<td><a href="#session-2-challenge-or-not-of-getting-a-myaccessid-connection">Session 2 – Challenge, or not, of getting a MyAccessID connection?</a></td>
+<td>UCL</td>
+</tr>
+<tr>
+<td>11:15</td>
+<td>Break</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11:20</td>
+<td><a href="#session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant">Session 3 – How many attributes to fetch? And are they trustworthy and compliant?</a></td>
+<td>University of Bristol</td>
+</tr>
+<tr>
+<td>11:50</td>
+<td>Conclusion / Next steps</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="session-abstracts">Session Abstracts<a class="headerlink" href="#session-abstracts" title="Permanent link">&para;</a></h2>
+<h3 id="session-1-identity-connectors-extending-authentication-beyond-myaccessid-federation">Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation<a class="headerlink" href="#session-1-identity-connectors-extending-authentication-beyond-myaccessid-federation" title="Permanent link">&para;</a></h3>
+<p>In the first workshop, we focused on MyAccessID as a federated solution. In practice, DRI service providers still need to support users who:</p>
+<ul>
+<li>Are not in eduGAIN</li>
+<li>Are from industry</li>
+<li>Have inconsistent attributes</li>
+<li>Require alternative authentication paths</li>
+</ul>
+<p>This session explores practical "connector" patterns to address these gaps.</p>
+<h3 id="session-2-challenge-or-not-of-getting-a-myaccessid-connection">Session 2 – Challenge, or not, of getting a MyAccessID connection?<a class="headerlink" href="#session-2-challenge-or-not-of-getting-a-myaccessid-connection" title="Permanent link">&para;</a></h3>
+<p>This session compares MyAccessID Identity Providers with Relying Parties (i.e. identity-consuming services) covering where to apply to register a Relying Party service, the information required for an application and its associated service prerequisites, relevant regulatory sources, potential objections and a model private cloud implementation architecture.</p>
+<h3 id="session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant">Session 3 – How many attributes to fetch? And are they trustworthy and compliant?<a class="headerlink" href="#session-3-how-many-attributes-to-fetch-and-are-they-trustworthy-and-compliant" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.gov.uk/government/publications/ai-research-resource/airr-advanced-supercomputers-for-the-uk">AIRR</a> uses MyAccessID as an authentication federation providing a minimal set of attributes: an email address, first name, and last name. Since AIRR requires that email addresses be "professional"(indicating an employee/employer relationship), the user's organisation is implicitly conveyed through these attributes. This session discusses the rationale for using a minimal attribute set in AIRR, approaches for managing project and team membership and the compliance and implementation challenges that arise when seeking attributes beyond this basic set. The session concludes with a discussion of possible future directions.</p>
+<h2 id="mailing-list">Mailing list<a class="headerlink" href="#mailing-list" title="Permanent link">&para;</a></h2>
+<p>If you are interested, consider subscribing to the <a href="mailto:IAM4DRI@JISCMAIL.AC.UK">IAM4DRI@JISCMAIL.AC.UK</a> mailing list. This list supports discussion, knowledge exchange, case studies, and problem-solving related to federated access approaches.</p>
+<p>You can subscribe directly using the link below:</p>
+<ul>
+<li><strong><a href="https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=IAM4DRI&amp;A=1">Subscribe to the IAM4DRI mailing list</a></strong></li>
+</ul>
+<p>Or visit the mailing list homepage:</p>
+<ul>
+<li><strong><a href="https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?A0=IAM4DRI">IAM4DRI mailing list homepage</a></strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
