@@ -12,8 +12,8 @@ This workshop will present the current progress of MyAccessID adoption by UK sit
 | Start Time | Session | Speaker / Organisation |
 | ------------ | --------- | ------------------------ |
 | 10:00 | Introduction | — |
-| 10:10 | [Session 1 – Connector][s1] | University of Cambridge |
-| 10:40 | Break | — |
+| 10:10 | [Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation][s1] | University of Cambridge |
+| 10:40 | Q & A | — |
 | 10:45 | [Session 2 – Challenge, or not, of getting a MyAccessID connection?][s2] | UCL |
 | 11:15 | Break | — |
 | 11:20 | [Session 3 – How many attributes to fetch? And are they trustworthy and compliant?][s3] | University of Bristol |
@@ -21,9 +21,16 @@ This workshop will present the current progress of MyAccessID adoption by UK sit
 
 ## Session Abstracts
 
-### Session 1 – Connector
+### Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation
 
-This session covers the range of options available for solving the authentication problem. Topics include the email authenticator developed at Cambridge, a solution using Keycloak with professional email addresses for authentication and per-organisation connections (e.g. Okta, Active Directory) to directly link Keycloak to their Identity Provider.
+In the first workshop, we focused on MyAccessID as a federated solution. In practice, DRI service providers still need to support users who:
+
+- Are not in eduGAIN
+- Are from industry
+- Have inconsistent attributes
+- Require alternative authentication paths
+
+This session explores practical "connector" patterns to address these gaps.
 
 ### Session 2 – Challenge, or not, of getting a MyAccessID connection?
 
@@ -31,7 +38,7 @@ This session compares MyAccessID Identity Providers with Relying Parties (i.e. i
 
 ### Session 3 – How many attributes to fetch? And are they trustworthy and compliant?
 
-AIRR uses MyAccessID as an authentication federation providing a minimal set of attributes: an email address, first name, and last name. Since AIRR requires that email addresses be "professional" indicating an employee/employer relationship, the user's organisation is implicitly conveyed through these attributes. This session discusses the rationale for using a minimal attribute set in AIRR, approaches for managing project and team membership and the compliance and implementation challenges that arise when seeking attributes beyond this basic set. The session concludes with a discussion of possible future directions.
+[AIRR](https://www.gov.uk/government/publications/ai-research-resource/airr-advanced-supercomputers-for-the-uk) uses MyAccessID as an authentication federation providing a minimal set of attributes: an email address, first name, and last name. Since AIRR requires that email addresses be "professional"(indicating an employee/employer relationship), the user's organisation is implicitly conveyed through these attributes. This session discusses the rationale for using a minimal attribute set in AIRR, approaches for managing project and team membership and the compliance and implementation challenges that arise when seeking attributes beyond this basic set. The session concludes with a discussion of possible future directions.
 
 ## Mailing list
 
