@@ -4,12 +4,10 @@ See below for information about talks and workshops from the MyAccessID UK user 
 
 ## Upcoming Events
 
-One registration form covers both upcoming workshops: [Register here][registration-link].
-
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-04-28<br>10:00-12:00 | Access Models Beyond Federated Identity Providers | MyAccessID UK Online Workshop | :material-close: | :material-check: | [Details][myaccessid-online-workshop-apr-2026] |
-| 2026-07-06<br>10:00-16:00 | TBC | MyAccessID UK In Person Workshop | :material-check: | :material-close: | [Register][registration-link] |
+| 2026-04-28<br>10:00-12:00 | [Access Models Beyond Federated Identity Providers][myaccessid-online-workshop-apr-2026] | Online Workshop | :material-close: | :material-check: | [Register][registration-link] |
+| 2026-07-06<br>10:00-16:00 | TBC | University of Cambridge, UK | :material-check: | :material-close: | [Register][registration-link] |
 
 ## Past Events
 
