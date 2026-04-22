@@ -12,7 +12,7 @@ This workshop will present the current progress of MyAccessID adoption by UK sit
 | Start Time | Session | Speaker / Organisation |
 | ------------ | --------- | ------------------------ |
 | 10:00 | Introduction | — |
-| 10:10 | [Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation][s1] | University of Cambridge |
+| 10:10 | [Session 1 – Identity Connectors: Extending Authentication Beyond MyAccessID Federation][s1] | University of Cambridge & STFC Hartree Centre |
 | 10:40 | Q & A | — |
 | 10:45 | [Session 2 – Challenge, or not, of getting a MyAccessID connection?][s2] | UCL |
 | 11:15 | Break | — |
@@ -30,7 +30,7 @@ In the first workshop, we focused on MyAccessID as a federated solution. In prac
 - Have inconsistent attributes
 - Require alternative authentication paths
 
-This session explores practical "connector" patterns to address these gaps.
+This session explores practical "connector" patterns to address these gaps. It will also include a demonstration focused on the implementation of federated authentication using MyAccessID for SSH access.
 
 ### Session 2 – Challenge, or not, of getting a MyAccessID connection?
 
