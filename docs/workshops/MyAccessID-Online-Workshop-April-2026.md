@@ -16,8 +16,8 @@ This workshop will present the current progress of MyAccessID adoption by UK sit
 | 10:40 | Q & A | — |
 | 10:45 | [Session 2 – Challenge, or not, of getting a MyAccessID connection?][s2] | UCL |
 | 11:15 | Break | — |
-| 11:20 | [Session 3 – How many attributes to fetch? And are they trustworthy and compliant?][s3] | University of Bristol |
-| 11:50 | Conclusion / Next steps | — |
+| ~~11:20~~ | ~~[Session 3 – How many attributes to fetch? And are they trustworthy and compliant?][s3]~~ | ~~University of Bristol~~ |
+| 11:20 | Conclusion / Next steps | — |
 
 ## Session Abstracts
 
@@ -36,9 +36,12 @@ This session explores practical "connector" patterns to address these gaps. It w
 
 This session compares MyAccessID Identity Providers with Relying Parties (i.e. identity-consuming services) covering where to apply to register a Relying Party service, the information required for an application and its associated service prerequisites, relevant regulatory sources, potential objections and a model private cloud implementation architecture.
 
-### Session 3 – How many attributes to fetch? And are they trustworthy and compliant?
+### ~~Session 3 – How many attributes to fetch? And are they trustworthy and compliant?~~
 
-[AIRR](https://www.gov.uk/government/publications/ai-research-resource/airr-advanced-supercomputers-for-the-uk) uses MyAccessID as an authentication federation providing a minimal set of attributes: an email address, first name, and last name. Since AIRR requires that email addresses be "professional"(indicating an employee/employer relationship), the user's organisation is implicitly conveyed through these attributes. This session discusses the rationale for using a minimal attribute set in AIRR, approaches for managing project and team membership and the compliance and implementation challenges that arise when seeking attributes beyond this basic set. The session concludes with a discussion of possible future directions.
+!!! warning "Session Cancelled"
+    We apologise, but Session 3 will not be taking place at this workshop. We plan to conduct this session at a later date.
+
+~~[AIRR](https://www.gov.uk/government/publications/ai-research-resource/airr-advanced-supercomputers-for-the-uk) uses MyAccessID as an authentication federation providing a minimal set of attributes: an email address, first name, and last name. Since AIRR requires that email addresses be "professional"(indicating an employee/employer relationship), the user's organisation is implicitly conveyed through these attributes. This session discusses the rationale for using a minimal attribute set in AIRR, approaches for managing project and team membership and the compliance and implementation challenges that arise when seeking attributes beyond this basic set. The session concludes with a discussion of possible future directions.~~
 
 ## Mailing list
 
