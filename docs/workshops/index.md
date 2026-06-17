@@ -6,7 +6,7 @@ See below for information about talks and workshops from the MyAccessID UK user 
 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-07-06<br>10:00-16:00 | TBC | In-person Workshop, University of Cambridge | :material-check: | :material-close: | [Register][registration-link] |
+| 2026-07-06<br>10:00-16:00 | [MyAccessID In-Person Workshop, Cambridge][myaccessid-inperson-workshop-jul-2026] | Pitt Building, Cambridge | :material-check: | :material-close: | [Register][registration-link] |
 
 ## Past Events
 
@@ -26,4 +26,5 @@ See below for information about talks and workshops from the MyAccessID UK user 
 [ciuk-manchester]: https://www.sc.stfc.ac.uk/ciuk-2025/
 [nfcs-spring-conf]: https://nfcs-networkplus.ac.uk/events/nfcs-networkplus-spring-conference-2026/
 [ciuk-poster]: ../slides/ucl-ciuk-poster.pptx
+[myaccessid-inperson-workshop-jul-2026]: MyAccessID-Inperson-Workshop-July-2026.md
 [registration-link]: https://forms.office.com/e/rgh3XfjXS0
