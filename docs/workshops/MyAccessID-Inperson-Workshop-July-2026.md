@@ -7,7 +7,7 @@ This workshop will bring together practitioners and community members to review 
 !!! tip "Register"
     [**Register to attend this workshop**][registration-link]
 
-    Registration closes **30th July 2026**.
+    Registration closes **30th June 2026**.
 
 ## Workshop Agenda
 
@@ -15,16 +15,15 @@ This workshop will bring together practitioners and community members to review 
 | ---------- | ------- |
 | 10:00 | Arrivals |
 | 10:30 | Introduction and Background |
-| 11:00 | Work Package 1 – Case Studies |
-| 11:20 | Work Package 2 – Connector |
-| 11:40 | Work Package 3 – Community of Practice |
+| 11:00 | MyAccessID Invited Talks (GEANT) |
 | 12:00 | Lunch |
-| 13:00 | MyAccessID Invited Talk (GEANT) |
-| 13:30 | Report Presentation |
-| 14:00 | Afternoon Break |
-| 14:30 | Open Table Discussion |
-| 15:30 | Closing |
-| Post 17:00 | Social — Eagle pub |
+| 13:00 | Work Package 1 – Case Studies |
+| 13:20 | Work Package 2 – Connector |
+| 13:40 | Work Package 3 – Community of Practice |
+| 14:00 | Report Presentation |
+| 14:30 | Afternoon Break |
+| 15:00 | Open Table Discussion |
+| 16:00 | Closing |
 
 ## Mailing list
 
