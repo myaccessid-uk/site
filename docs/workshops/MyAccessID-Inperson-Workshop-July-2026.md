@@ -11,19 +11,19 @@ This workshop will bring together practitioners and community members to review 
 
 ## Workshop Agenda
 
-| Start Time | Session |
-| ---------- | ------- |
-| 10:00 | Arrivals |
-| 10:30 | Introduction and Background |
-| 11:00 | MyAccessID Invited Talks (GEANT) |
-| 12:00 | Lunch |
-| 13:00 | Work Package 1 – Case Studies |
-| 13:20 | Work Package 2 – Connector |
-| 13:40 | Work Package 3 – Community of Practice |
-| 14:00 | Report Presentation |
-| 14:30 | Afternoon Break |
-| 15:00 | Open Table Discussion |
-| 16:00 | Closing |
+| Start Time | Session | Talk Title |
+| ---------- | ------- | ---------- |
+| 10:00 | Arrivals | |
+| 10:30 | Introduction and Background | |
+| 11:00 | MyAccessID Invited Talks (GEANT) | MyAccessID: Common Access Layer for Science in Europe |
+| 12:00 | Lunch | |
+| 13:00 | Work Package 1 – Case Studies | MyAccessID - Getting connected for a private cloud tenancy |
+| 13:20 | Work Package 2 – Connector | Access Models Beyond Federated Identity Providers |
+| 13:40 | Work Package 3 – Community of Practice | Building a UK IAM Community of Practice |
+| 14:00 | Report Presentation | |
+| 14:30 | Afternoon Break | |
+| 15:00 | Open Table Discussion | |
+| 16:00 | Closing | |
 
 ## Mailing list
 
