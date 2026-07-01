@@ -6,7 +6,7 @@ See below for information about talks and workshops from the MyAccessID UK user 
 
 | Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
 | ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-07-06<br>10:00-16:00 | [MyAccessID In-Person Workshop, Cambridge][myaccessid-inperson-workshop-jul-2026] | Pitt Building, Cambridge | :material-check: | :material-close: | [Register][registration-link] |
+| 2026-07-06<br>10:00-16:00 | [MyAccessID In-Person Workshop, Cambridge][myaccessid-inperson-workshop-jul-2026] | Pitt Building, Cambridge | :material-check: | :material-check: | [Register][registration-link] |
 
 ## Past Events
 

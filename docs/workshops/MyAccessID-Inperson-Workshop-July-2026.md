@@ -4,6 +4,8 @@ The MyAccessID UK User Community is hosting a full-day in-person workshop at the
 
 This workshop will bring together practitioners and community members to review progress across the project's three work packages — case studies from early adopter sites, the identity connector, and community of practice activities — alongside an invited talk from GEANT and a report presentation. The day closes with an open table discussion, providing an opportunity for the wider community to contribute to the project's future direction.
 
+An option to attend online is also available for those unable to travel to Cambridge. Indicate your preference when registering, and joining details will be sent closer to the event.
+
 !!! tip "Register"
     [**Register to attend this workshop**][registration-link]
 
