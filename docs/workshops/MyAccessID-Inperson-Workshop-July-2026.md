@@ -9,8 +9,6 @@ An option to attend online is also available for those unable to travel to Cambr
 !!! tip "Register"
     [**Register to attend this workshop**][registration-link]
 
-    Registration closes **30th June 2026**.
-
 ## Workshop Agenda
 
 | Start Time | Session | Talk Title |
