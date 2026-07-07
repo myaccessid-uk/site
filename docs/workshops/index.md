@@ -4,14 +4,13 @@ See below for information about talks and workshops from the MyAccessID UK user 
 
 ## Upcoming Events
 
-| Date/time                 | Subject                 | Event/Location                    | In-person        | Online           | Details                       |
-| ------------------------- | ----------------------- | --------------------------------- | ---------------- | ---------------- | -------------------------------------- |
-| 2026-07-06<br>10:00-16:00 | [MyAccessID In-Person Workshop, Cambridge][myaccessid-inperson-workshop-jul-2026] | Pitt Building, Cambridge | :material-check: | :material-check: | [Register][registration-link] |
+No upcoming events at this time.
 
 ## Past Events
 
 | Date/time                 | Subject                 | Event/Location                      | In-person        | Online           |
 | ------------------------- | ----------------------- | ----------------------------------- | ---------------- | ---------------- |
+| 2026-07-06<br>10:00-16:00 | [MyAccessID In-Person Workshop, Cambridge][myaccessid-inperson-workshop-jul-2026] | Pitt Building, Cambridge | :material-check: | :material-check: |
 | 2026-12-02<br>10:00-12:00 | Access Models Beyond Federated Identity Providers |  [MyAccessID Online Workshop] [myaccessid-online-workshop-apr-2026] | :material-close: | :material-check: |
 | 2026-02-26 | Poster: How can the UK Support MyAccessID | [NFCS NetworkPlus Spring Conference, 2026] [nfcs-spring-conf] | :material-check: | :material-close: |
 | 2025-12-03 | [Poster: Identity Federation for Research Cloud with MyAccessID] [ciuk-poster] | [CIUK 2025, Manchester] [ciuk-manchester] | :material-check: | :material-close: |
@@ -27,4 +26,3 @@ See below for information about talks and workshops from the MyAccessID UK user 
 [nfcs-spring-conf]: https://nfcs-networkplus.ac.uk/events/nfcs-networkplus-spring-conference-2026/
 [ciuk-poster]: ../slides/ucl-ciuk-poster.pptx
 [myaccessid-inperson-workshop-jul-2026]: MyAccessID-Inperson-Workshop-July-2026.md
-[registration-link]: https://forms.office.com/e/rgh3XfjXS0
