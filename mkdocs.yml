@@ -19,7 +19,9 @@ nav:
         - "workshops/MyAccessID-Online-Workshop-Dec-2025.md"
         - "workshops/MyAccessID-Online-Workshop-April-2026.md"
         - "workshops/MyAccessID-Inperson-Workshop-July-2026.md"
-    - Resources: myaccessid-keycloak-setup.md
+    - Resources:
+        - myaccessid-keycloak-setup.md
+        - Final Report: resources/myaid_final_report.pdf
     - FAQ: faq.md
     - Join IAM4DRI Mailing List: join-iam4dri.md 
 extra_css:
